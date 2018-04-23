@@ -14,3 +14,7 @@ var labelEl = document.getElementsByTagName('label')[3];
 labelEl.textContent = Question.allQuestions[0].optionP.text;
 var labelEl = document.getElementsByTagName('label')[4];
 labelEl.textContent = Question.allQuestions[0].optionS.text;
+
+function handleSubmit(event) {
+  event.preventDefault();
+}
