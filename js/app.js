@@ -2,8 +2,8 @@
 
 // [JavaScript, C#, Python, Java]
 
-var allUser = [];
-var allQuestions = [];
+User.allUser = [];
+Question.allQuestions = [];
 
 function User(username) { //eslint-disable-line
   this.username = username;
@@ -11,7 +11,7 @@ function User(username) { //eslint-disable-line
   this.totalPointsJ = 0;
   this.totalPointsP = 0;
   this.totalPointsS = 0;
-  allUser.push(this);
+  User.allUser.push(this);
 }
 
 function Option (url, text, pointsC, pointsJ, pointsP, pointsS) { //eslint-disable-line
@@ -30,7 +30,7 @@ function Question (id, text, optionC, optionJ, optionP, optionS) {
   this.optionJ = optionJ;
   this.optionP = optionP;
   this.optionS = optionS;
-  allQuestions.push(this);
+  Question.allQuestions.push(this);
 }
 
 new Question (
@@ -42,4 +42,4 @@ new Question (
   new Option ('', 'JavaScript', 0, 0, 0, 2)
 );
 
-console.log(allQuestions[0]);
+// console.log(allQuestions[0]);
