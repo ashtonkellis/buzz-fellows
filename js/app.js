@@ -1,3 +1,12 @@
 'use strict';
 
-console.log('its link');
+// [JavaScript, C#, Python, Java]
+
+allUser = [];
+
+function User(username) {
+  this.username = username;
+  this.question1 = null;
+  allUser.push(this);
+}
+
