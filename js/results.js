@@ -1,0 +1,2 @@
+var maxPoints = 16;
+

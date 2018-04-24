@@ -1,6 +1,5 @@
 'use strict';
 
-
 var h2El = document.getElementById('question1');
 h2El.textContent = Question.allQuestions[0].text;
 
@@ -16,14 +15,13 @@ labelEl.textContent = Question.allQuestions[0].optionS.text;
 
 function handleSubmit(event) {
   event.preventDefault();
-
+  
+  var username = document.getElementById('username').value;
   // variables to pass to new User constructor
   var userPointsC = 0;
   var userPointsJ = 0;
   var userPointsP = 0;
   var userPointsS = 0;
-
-  var username = document.getElementById('username').value;
 
   // loop through each question and increment user points
   for (var question of Question.allQuestions) {
@@ -42,8 +40,10 @@ function handleSubmit(event) {
 
   console.log(User.allUser);
 
+  // resets the form on submit
   event.target.reset();
-  
+
+  // store users info into local storage
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
   localStorage.setItem('pastUsers', JSON.stringify(User.allUser));
 
