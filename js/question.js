@@ -16,7 +16,7 @@ labelEl.textContent = Question.allQuestions[0].optionS.text;
 
 function handleSubmit(event) {
   event.preventDefault();
-  
+
   // variables to pass to new User constructor
   var userPointsC = 0;
   var userPointsJ = 0;
@@ -29,17 +29,17 @@ function handleSubmit(event) {
   for (var question of Question.allQuestions) {
     var questionId = question.id;
     var userChoice = event.target[questionId].value;
-    
+
     // increment all of the points
     userPointsC += question[userChoice].pointsC;
     userPointsJ += question[userChoice].pointsJ;
     userPointsP += question[userChoice].pointsP;
     userPointsS += question[userChoice].pointsS;
   }
-  
+
   // make new user
   new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
-  
+
   console.log(User.allUser);
 }
 
