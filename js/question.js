@@ -15,11 +15,12 @@ labelEl.textContent = Question.allQuestions[0].optionP.text;
 labelEl = document.getElementsByTagName('label')[4];
 labelEl.textContent = Question.allQuestions[0].optionS.text;
 
+var myForm;
+
 function handleSubmit(event) {
+  myForm = event.target;
   event.preventDefault();
   console.log('yo');
-  console.log(event.target.username.value);
-  console.log(event.target.q1.getAttribute('Cpoint'));
 }
 
 var formEl = document.getElementById('mainQuiz');
