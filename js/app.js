@@ -1,8 +1,10 @@
 'use strict';
-
-// [JavaScript, C#, Python, Java]
+// C#, Java, Python, JavaScript
 
 Question.allQuestions = [];
+
+Question.numberOfQuestion = 2; // Set to 2 atm because only two questions made
+Question.optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionS'];
 
 User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
 
@@ -48,6 +50,15 @@ new Question (
   new Option ('', 'Java', 0, 2, 0, 0),
   new Option ('', 'Python', 0, 0, 2, 0),
   new Option ('', 'JavaScript', 0, 0, 0, 2)
+);
+
+new Question (
+  'question2',
+  'Choose your 401 class V2',
+  new Option ('img/csharp-logo.png', '', 2, 0, 0, 0),
+  new Option ('img/java-logo.png', '', 0, 2, 0, 0),
+  new Option ('img/python-logo.png', '', 0, 0, 2, 0),
+  new Option ('img/js-logo.png', '', 0, 0, 0, 2)
 );
 
 // console.log(allQuestions[0]);
