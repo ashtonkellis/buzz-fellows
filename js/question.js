@@ -42,6 +42,8 @@ function handleSubmit(event) {
 
   console.log(User.allUser);
 
+  event.target.reset();
+  
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
   localStorage.setItem('pastUsers', JSON.stringify(User.allUser));
 
