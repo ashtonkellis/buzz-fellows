@@ -2,15 +2,23 @@
 
 // [JavaScript, C#, Python, Java]
 
-User.allUser = [];
 Question.allQuestions = [];
 
-function User(username) { //eslint-disable-line
+User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
+
+if (User.allUser.length === 0) {
+  new User('Ashton', 1, 2, 3, 4);
+  new User('Ben', 2, 3, 4, 1);
+  new User('Jenny', 3, 4, 1, 2);
+  new User('Mario', 4, 1, 2, 3);
+}
+
+function User(username, totalPointsC, totalPointsJ, totalPointsP, totalPointsS) { //eslint-disable-line
   this.username = username;
-  this.totalPointsC = 0;
-  this.totalPointsJ = 0;
-  this.totalPointsP = 0;
-  this.totalPointsS = 0;
+  this.totalPointsC = totalPointsC;
+  this.totalPointsJ = totalPointsJ;
+  this.totalPointsP = totalPointsP;
+  this.totalPointsS = totalPointsS;
   User.allUser.push(this);
 }
 
