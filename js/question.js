@@ -25,21 +25,22 @@ function handleSubmit(event) {
 
   var username = document.getElementById('username').value;
 
-  var question = Question.allQuestions[0];
-  var questionId = question.id;
-  var userChoice = event.target[questionId].value;
-
-  // increment all of the points
-  userPointsC += question[userChoice].pointsC;
-  userPointsJ += question[userChoice].pointsJ;
-  userPointsP += question[userChoice].pointsP;
-  userPointsS += question[userChoice].pointsS;
+  // loop through each question and increment user points
+  for (var question of Question.allQuestions) {
+    var questionId = question.id;
+    var userChoice = event.target[questionId].value;
+    
+    // increment all of the points
+    userPointsC += question[userChoice].pointsC;
+    userPointsJ += question[userChoice].pointsJ;
+    userPointsP += question[userChoice].pointsP;
+    userPointsS += question[userChoice].pointsS;
+  }
   
+  // make new user
   new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
-
-  console.log(User.allUser);
-
   
+  console.log(User.allUser);
 }
 
 var formEl = document.getElementById('mainQuiz');
