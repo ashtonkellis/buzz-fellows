@@ -44,6 +44,8 @@ function handleSubmit(event) {
 
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
   localStorage.setItem('pastUsers', JSON.stringify(User.allUser));
+
+  window.location.href = 'results.html';
 }
 
 var formEl = document.getElementById('mainQuiz');
