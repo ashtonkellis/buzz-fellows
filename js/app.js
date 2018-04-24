@@ -4,6 +4,9 @@
 
 Question.allQuestions = [];
 
+Question.numberOfQuestion = 2; // Set to 2 atm because only two questions made
+Question.optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionS'];
+
 User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
 
 if (User.allUser.length === 0) {

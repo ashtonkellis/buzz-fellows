@@ -1,6 +1,5 @@
 'use strict';
 
-var optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionJ'];
 
 // var h2El = document.getElementById('question1');
 // h2El.textContent = Question.allQuestions[0].text;
@@ -97,35 +96,29 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
-// find the h2 for the question block and give it the question string
-// find the label element
 
 
-
-
-var labelElArr = document.querySelectorAll('div#question1 div label');
-console.log(labelElArr);
-
-for(var i = 0; i < labelElArr.length; i++) {
-  var pEl = document.createElement('p');
-  pEl.textContent = Question.allQuestions[0][optionOrderArr[i]].text;
-  var label = labelElArr[i];
-  label.appendChild(pEl);
+function renderQuestions() {
+  //gives me an array of all the questionEl 
+  var questionBlockElArr = document.getElementsByClassName('question');
+  for(var i = 0; i < Question.numberOfQuestion; i++) {
+    //prints out the question for each question
+    var h2El = questionBlockElArr[i].getElementsByTagName('h2')[0];
+    h2El.textContent = Question.allQuestions[i].text;
+    var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
+    //renders the 4 options for the question
+    for(var j = 0; j < labelElArr.length; j++) {
+      var pEl = document.createElement('p');
+      pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
+      var imgEl = document.createElement('img');
+      imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
+      var label = labelElArr[j];
+      label.appendChild(pEl);
+      label.appendChild(imgEl);
+    }
+  }
 }
+renderQuestions();
 
 
-labelElArr = document.querySelectorAll('div#question2 div label');
-console.log(labelElArr);
 
-for(var i = 0; i < labelElArr.length; i++) {
-  var imgEl = document.createElement('img');
-  imgEl.src = Question.allQuestions[1][optionOrderArr[i]].url;
-  imgEl.setAttribute('width', 200); // Delete this for other image Bandaid fix for sizing issue
-  var label = labelElArr[i];
-  label.appendChild(imgEl);
-}
-
-// give that element the img or text for C# option
-// find the other label element and give that Java optiom
-// find the other label element and give that python option
-// find the other label element and give that the JS option
