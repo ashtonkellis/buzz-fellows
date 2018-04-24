@@ -1,18 +1,19 @@
 'use strict';
 
+var optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionJ'];
 
-var h2El = document.getElementById('question1');
-h2El.textContent = Question.allQuestions[0].text;
+// var h2El = document.getElementById('question1');
+// h2El.textContent = Question.allQuestions[0].text;
 
-var labelEl = document.getElementsByTagName('label')[1];
-labelEl.textContent = Question.allQuestions[0].optionC.text;
+// var labelEl = document.getElementsByTagName('label')[1];
+// labelEl.textContent = Question.allQuestions[0].optionC.text;
 
-labelEl = document.getElementsByTagName('label')[2];
-labelEl.textContent = Question.allQuestions[0].optionJ.text;
-labelEl = document.getElementsByTagName('label')[3];
-labelEl.textContent = Question.allQuestions[0].optionP.text;
-labelEl = document.getElementsByTagName('label')[4];
-labelEl.textContent = Question.allQuestions[0].optionS.text;
+// labelEl = document.getElementsByTagName('label')[2];
+// labelEl.textContent = Question.allQuestions[0].optionJ.text;
+// labelEl = document.getElementsByTagName('label')[3];
+// labelEl.textContent = Question.allQuestions[0].optionP.text;
+// labelEl = document.getElementsByTagName('label')[4];
+// labelEl.textContent = Question.allQuestions[0].optionS.text;
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -52,3 +53,79 @@ function handleSubmit(event) {
 
 var formEl = document.getElementById('mainQuiz');
 formEl.addEventListener('submit', handleSubmit);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// find the h2 for the question block and give it the question string
+// find the label element
+
+
+
+
+var labelElArr = document.querySelectorAll('div#question1 div label');
+console.log(labelElArr);
+
+for(var i = 0; i < labelElArr.length; i++) {
+  var pEl = document.createElement('p');
+  pEl.textContent = Question.allQuestions[0][optionOrderArr[i]].text;
+  var label = labelElArr[i];
+  label.appendChild(pEl);
+}
+
+
+labelElArr = document.querySelectorAll('div#question2 div label');
+console.log(labelElArr);
+
+for(var i = 0; i < labelElArr.length; i++) {
+  var imgEl = document.createElement('img');
+  imgEl.src = Question.allQuestions[1][optionOrderArr[i]].url;
+  imgEl.setAttribute('width', 200); // Delete this for other image Bandaid fix for sizing issue
+  var label = labelElArr[i];
+  label.appendChild(imgEl);
+}
+
+// give that element the img or text for C# option
+// find the other label element and give that Java optiom
+// find the other label element and give that python option
+// find the other label element and give that the JS option

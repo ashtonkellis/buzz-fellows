@@ -50,4 +50,13 @@ new Question (
   new Option ('', 'JavaScript', 0, 0, 0, 2)
 );
 
+new Question (
+  'question2',
+  'Choose your 401 class V2',
+  new Option ('img/csharp-logo.png', '', 2, 0, 0, 0),
+  new Option ('img/java-logo.png', '', 0, 2, 0, 0),
+  new Option ('img/python-logo.png', '', 0, 0, 2, 0),
+  new Option ('img/js-logo.png', '', 0, 0, 0, 2)
+);
+
 // console.log(allQuestions[0]);
