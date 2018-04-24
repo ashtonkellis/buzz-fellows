@@ -2,37 +2,16 @@ var maxPoints = 16;
 
 var currentUser = User.allUser[(User.allUser.length - 1)];
 
-function calculateChartData() {
-  var user = currentUser;
-  var ctx = document.getElementById('user-results-chart').getContext('2d');
-var myChart = new Chart(ctx, addChartData());
-}
-
 function addChartData () {
   var chartData = {
     type: 'doughnut',
     data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: [],
       datasets: [{
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
+        data: [],
+        backgroundColor: [],
+        borderColor: [],
       }]
     },
     options: {
@@ -41,3 +20,34 @@ function addChartData () {
   };
   return chartData;
 }
+
+function calculateChartData() {
+  currentUser.allChartData = addChartData();
+  var chartData = currentUser.allChartData.data;
+  // all courses chart - labels
+  chartData.labels.push('C#');
+  chartData.labels.push('Java');
+  chartData.labels.push('Python');
+  chartData.labels.push('JavaScript');
+  // all courses chart - data
+  console.log(currentUser);
+  chartData.datasets[0].data.push(currentUser.totalPointsC);
+  chartData.datasets[0].data.push(currentUser.totalPointsJ);
+  chartData.datasets[0].data.push(currentUser.totalPointsP);
+  chartData.datasets[0].data.push(currentUser.totalPointsJ);
+  // all courses chart - background colors
+  chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
+  chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
+  chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
+  chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
+  // all courses chart - border colors
+  chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1.0)');
+  chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1.0)');
+  chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1.0)');
+  chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1.0)');
+
+  var ctx = document.getElementById('user-results-chart').getContext('2d');
+  var myChart = new Chart(ctx, currentUser.allChartData);
+}
+
+var test = calculateChartData();
