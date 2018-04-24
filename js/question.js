@@ -4,7 +4,6 @@
 var h2El = document.getElementById('question1');
 h2El.textContent = Question.allQuestions[0].text;
 
-
 var labelEl = document.getElementsByTagName('label')[1];
 labelEl.textContent = Question.allQuestions[0].optionC.text;
 
@@ -17,7 +16,30 @@ labelEl.textContent = Question.allQuestions[0].optionS.text;
 
 function handleSubmit(event) {
   event.preventDefault();
-  console.log('yo');
+  
+  // variables to pass to new User constructor
+  var userPointsC = 0;
+  var userPointsJ = 0;
+  var userPointsP = 0;
+  var userPointsS = 0;
+
+  var username = document.getElementById('username').value;
+
+  var question = Question.allQuestions[0];
+  var questionId = question.id;
+  var userChoice = event.target[questionId].value;
+
+  // increment all of the points
+  userPointsC += question[userChoice].pointsC;
+  userPointsJ += question[userChoice].pointsJ;
+  userPointsP += question[userChoice].pointsP;
+  userPointsS += question[userChoice].pointsS;
+  
+  new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
+
+  console.log(User.allUser);
+
+  
 }
 
 var formEl = document.getElementById('mainQuiz');
