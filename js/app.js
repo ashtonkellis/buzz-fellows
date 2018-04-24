@@ -5,12 +5,12 @@
 User.allUser = [];
 Question.allQuestions = [];
 
-function User(username) { //eslint-disable-line
+function User(username, totalPointsC, totalPointsJ, totalPointsP, totalPointsS) { //eslint-disable-line
   this.username = username;
-  this.totalPointsC = 0;
-  this.totalPointsJ = 0;
-  this.totalPointsP = 0;
-  this.totalPointsS = 0;
+  this.totalPointsC = totalPointsC;
+  this.totalPointsJ = totalPointsJ;
+  this.totalPointsP = totalPointsP;
+  this.totalPointsS = totalPointsS;
   User.allUser.push(this);
 }
 
