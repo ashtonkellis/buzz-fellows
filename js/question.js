@@ -38,11 +38,14 @@ function handleSubmit(event) {
   }
 
   // make new user
-  new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
+  var currentUser = new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
 
   console.log(User.allUser);
 
   event.target.reset();
+  
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  localStorage.setItem('pastUsers', JSON.stringify(User.allUser));
 }
 
 var formEl = document.getElementById('mainQuiz');
