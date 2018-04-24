@@ -18,6 +18,8 @@ labelEl.textContent = Question.allQuestions[0].optionS.text;
 function handleSubmit(event) {
   event.preventDefault();
   console.log('yo');
+  console.log(event.target.username.value);
+  console.log(event.target.q1.getAttribute('Cpoint'));
 }
 
 var formEl = document.getElementById('mainQuiz');
