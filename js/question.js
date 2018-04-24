@@ -41,6 +41,8 @@ function handleSubmit(event) {
   new User(username, userPointsC, userPointsJ, userPointsP, userPointsS);
 
   console.log(User.allUser);
+
+  event.target.reset();
 }
 
 var formEl = document.getElementById('mainQuiz');
