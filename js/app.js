@@ -1,6 +1,5 @@
 'use strict';
-
-// [JavaScript, C#, Python, Java]
+// C#, Java, Python, JavaScript
 
 Question.allQuestions = [];
 
