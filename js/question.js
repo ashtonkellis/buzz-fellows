@@ -219,8 +219,11 @@ function calculateProgress(x) {
 }
 
 function userInputName(e) {
-  if(usernameInputEl.validity.valid) {
-    document.getElementById('progress-message').textContent = 'Hello, ' + usernameInputEl.value.toUpperCase();
+  if (e.keyCode === 13) {
+    if(usernameInputEl.validity.valid) {
+      document.getElementById('progress-message').textContent = 'Hello, ' + usernameInputEl.value.toUpperCase();
+      document.querySelector('.question').scrollIntoView({behavior: 'smooth'});
+    } 
   }
 }
 
@@ -245,5 +248,55 @@ function whoIsThatMisterOnTheRadio(e) {
   calculateProgress(numValid);
 }
 
-usernameInputEl.addEventListener('blur', userInputName);
+usernameInputEl.addEventListener('keyup', userInputName);
 formEl.addEventListener('change', whoIsThatMisterOnTheRadio);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
