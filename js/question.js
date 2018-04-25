@@ -1,9 +1,10 @@
 /* global Question User*/
 'use strict';
 
+//gives me an array of all the questionEl
+var questionBlockElArr = document.getElementsByClassName('question');
+
 function renderQuestions() {
-  //gives me an array of all the questionEl
-  var questionBlockElArr = document.getElementsByClassName('question');
   for(var i = 0; i < Question.numberOfQuestion; i++) {
     //prints out the question for each question
     var h2El = questionBlockElArr[i].getElementsByTagName('h2')[0];
@@ -200,19 +201,49 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
-var numValid = 0;
+// var numValid = 0;
 
 
-var usernameInputEl = document.getElementsByTagName('input')[0];
-function userInputName() {
-  if(usernameInputEl.validity.valid) {
-    numValid++;
+var allInputEl = document.getElementsByTagName('input');
+var usernameInputEl = allInputEl[0];
+
+
+function calculateProgress(x) {
+  var percentIncrease = (1 / Question.numberOfQuestion) * 100;
+  for(var i = 0; i < Question.numberOfQuestion + 1; i++) {
+    if(x === i){
+      document.getElementById('progress').value = percentIncrease * (i);
+    }
   }
-  if(numValid === 1) {
-    document.getElementById('progress').value = 100;
-    document.getElementById('progress-message').textContent = 'Hello user';
+  document.getElementById('progress-message').textContent = x + '/' + Question.numberOfQuestion;
+}
+
+function userInputName(e) {
+  if(usernameInputEl.validity.valid) {
+    document.getElementById('progress-message').textContent = 'Hello, ' + usernameInputEl.value.toUpperCase();
   }
 }
 
+// How many questions are valid so far?
+function calcNumValid() {
+  var numValid = 0;
+  for(var i of questionBlockElArr) {
+    var radioElArr = i.getElementsByTagName('input');
+    for (var j of radioElArr) {
+      if(j.type === 'radio' && j.checked) {
+        numValid++;
+      }
+    }
+  }
+  return numValid;
+}
+
+
+function whoIsThatMisterOnTheRadio(e) {
+  var numValid = calcNumValid();
+  console.log(numValid);
+  calculateProgress(numValid);
+}
 
 usernameInputEl.addEventListener('blur', userInputName);
+formEl.addEventListener('change', whoIsThatMisterOnTheRadio);
