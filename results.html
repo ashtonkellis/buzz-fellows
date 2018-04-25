@@ -8,8 +8,7 @@
   
   <body>
     <header>
-      <img src="http://via.placeholder.com/100x100">
-      <h1>Buzz Fellows</h1>
+      <img src="img/buzzfellows-alt.png">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -20,14 +19,69 @@
     </header>
 
     <main>
-      <section>
-        <div>Your Results!</div>
-        <canvas id="user-results-chart"></canvas>
+      <h2>Here are your results <span id="hero-username"></span>!</h2>
+      <section id="hero-results">
+        <div>
+          <div class="chart-container">
+            <canvas id="hero-results-c"></canvas>
+          </div>
+          <div class="text">
+            <h3>C#</h3>
+            <p>C# is a multi-paradigm programming language encompassing strong typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines. It was developed by Microsoft within its .NET initiative.</p>
+            <a href="https://www.codefellows.org/courses/code-401/advanced-software-development-in-asp-net-core/">Code 401: Advanced Software Development in ASP.NET Core</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="chart-container">
+            <canvas id="hero-results-j"></canvas>
+          </div>
+          <div class="text">
+            <h3>Java</h3>
+            <p>Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and designed to have as few implementation dependencies as possible</p>
+            <a href="https://www.codefellows.org/courses/code-401/advanced-software-development-in-java-with-springmvc-and-android/">Code 401: Advanced Software Development in Java with SpringMVC &amp; Android</a>
+          </div>
+        </div>
+          
+          <div>
+            <div class="chart-container">
+              <canvas id="hero-results-p"></canvas>
+            </div>
+              <div class="text">
+                <h3>Python</h3>
+                <p>Python is an interpreted high-level programming language for general-purpose programming. Python has a design philosophy that emphasizes code readability, and provides constructs that enable clear programming on both small and large scales.</p>
+                <a href="https://www.codefellows.org/courses/code-401/advanced-software-development-in-python/">Code 401: Advanced Software Development in Python</a>
+              </div>
+            </div>
+            
+          <div>
+            <div class="chart-container">
+              <canvas id="hero-results-s"></canvas>
+            </div>
+            <div class="text">
+              <h3>JavaScript</h3>
+              <p>JavaScript (JS) is a high-level, interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of the World Wide Web.</p>
+              <a href="https://www.codefellows.org/courses/code-401/advanced-software-development-in-full-stack-javascript/">Code 401: Advanced Software Development in Full-Stack JavaScript</a>
+            </div>
+          </div>            
       </section>
-      <section id="all-results-section">Here are the Past Results</section>
+      
+      <h2>Other User Results</h2>
+      <section id="all-results-section"></section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="share">
+          <h2>Be the first to tell your friends!</h2>
+          <ul class="icons">
+            <li><a href="https://www.facebook.com" target="_blank"><img src="img/website-logos/facebooklogo.png" alt="facebook"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="img/website-logos/instagramlogo.png" alt="instagram"></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><img src="img/website-logos/twitterlogo.png" alt="twitter"></a></li>
+            <li><a href="https://www.youtube.com" target="_blank"><img src="img/website-logos/youtubelogo.png" alt="youtube"></a></li>
+          </ul>
+        </div>
+        <p>&copy; Team Semi-Serious, Code Fellows 201 April 2018 Cohort</p>
+    </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="js/app.js"></script>

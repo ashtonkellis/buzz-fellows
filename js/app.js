@@ -10,10 +10,10 @@ Question.optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionS'];
 User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
 
 if (User.allUser.length === 0) {
-  new User('Ashton', 1, 2, 3, 4);
-  new User('Ben', 2, 3, 4, 1);
-  new User('Jenny', 3, 4, 1, 2);
-  new User('Mario', 4, 1, 2, 3);
+  new User('Ashton', 2, 3, 8, 16);
+  new User('Ben', 16, 2, 3, 8);
+  new User('Jenny', 8, 16, 2, 3);
+  new User('Mario', 3, 8, 16, 2);
 }
 
 function User(username, totalPointsC, totalPointsJ, totalPointsP, totalPointsS) { //eslint-disable-line
@@ -46,7 +46,7 @@ function Question (id, text, optionC, optionJ, optionP, optionS) {
 
 new Question (
   'question1',
-  'What do you want to do?',
+  'What do you want to do with code?',
   new Option ('', 'Make Games', 2, 0, 1, 0),
   new Option ('', 'Make Mobile Apps', 0, 2, 0, 1),
   new Option ('', 'Analyze Data', 1, 0, 2, 0),
@@ -55,7 +55,7 @@ new Question (
 
 new Question (
   'question2',
-  'Which company interests you the most?',
+  'Which of these companies would you like to work for most?',
   new Option ('img/company-logos/microsoftlogo.png', '', 2, 0, 0, 1),
   new Option ('img/company-logos/amazonlogo.png', '', 0, 2, 1, 0),
   new Option ('img/company-logos/boeinglogo.png', '', 0, 1, 2, 0),
@@ -64,7 +64,7 @@ new Question (
 
 new Question (
   'question3',
-  'Is money important to you?',
+  'How important is money to you?',
   new Option ('', 'Very', 0, 1, 2, 0),
   new Option ('', 'Kind of', 0, 2, 1, 0),
   new Option ('', 'Not very', 1, 0, 0, 2),
@@ -73,7 +73,7 @@ new Question (
 
 new Question (
   'question4',
-  'Do you like change?',
+  'How do you feel about change?',
   new Option ('', 'Love it', 0, 1, 2, 0),
   new Option ('', 'Like it', 0, 2, 1, 0),
   new Option ('', 'Dislike it', 1, 0, 0, 2),
@@ -109,7 +109,7 @@ new Question (
 
 new Question (
   'question8',
-  'What is your favorite website?',
+  'What is your favorite social media site?',
   new Option ('img/website-logos/twitterlogo.png', '', 2, 0, 1, 0),
   new Option ('img/website-logos/instagramlogo.png', '', 0, 2, 0, 1),
   new Option ('img/website-logos/youtubelogo.png', '', 1, 0, 2, 0),

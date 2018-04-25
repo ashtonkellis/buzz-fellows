@@ -8,8 +8,7 @@
   
   <body>
     <header>
-      <img src="img/buzzfellows.png">
-      <h1>Buzz Fellows</h1>
+      <img src="img/buzzfellows-alt.png">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -24,30 +23,58 @@
         <div>
           <img src="img/about-us/ashtonellis.jpeg">
           <h2>Ashton</h2>
-          <p>Here is Ashton</p>
-          <canvas></canvas>
+          <p>Meet Ashton!</p>
+          <p>My name is Ashton, and I am an aspiring full-stack JavaScript developer with a background in Health Physics. I have a deep passion for hobbies that don't require having to go outside, including: coding, board games, and Brazilian Jiu-Jitsu. I am racked with indecision as to whether to take 401 Python or 401 JavaScript, and this quiz helped me a lot! I hope it will help you too.</p>
+          <div>
+            <canvas id='ashtonchart'></canvas>
+          </div>
         </div>
         <div>
           <img src="img/about-us/bentaylor.jpeg">
           <h2>Ben</h2>
-          <p>Here is Ben</p>
-          <canvas></canvas>
+          <p>Meet Ben!</p>
+          <p>Hi! I am Ben, and I am an aspiring software developer with prior experience in Python, Java, C#, and SQL Server. I am currently planning on taking the JavaScript 401 course at Code Fellows. Fun Fact: I have a serious case of Pac-Man fever, and you can often find me playing it in my free time.</p>
+          <div>
+            <canvas id='benchart'></canvas>
+          </div>
         </div>
         <div>
           <img src="img/about-us/jennylawrence.jpeg">
           <h2>Jenny</h2>
-          <p>Here is Jenny</p>
-          <canvas></canvas>
+          <p>Meet Jenny!</p>
+          <p>Hi there! My name is Jenny and I am currently working towards becoming a full-stack JavaScript developer. I have a background in non-profit/social work, and I hope to be able to create dynamic and beautiful web pages for my clients, as well as volunteer my skills for local non-profits. I, like my peers, was unsure of what 401 class to take, and this quiz pointed me in the righ direction! Give it a shot if you are still unsure which path to take.</p>
+          <div>
+            <canvas id='jennychart'></canvas>
+          </div>
         </div>
         <div>
           <img src="img/about-us/marionishio.jpg">
           <h2>Mario</h2>
-          <p>Here is Mario</p>
-          <canvas></canvas>
+          <p>Meet Mario!</p>
+          <p>Hi, my name is Mario Nishio. I'm a full-stack Javascript developer with a diverse background involving research and education. I, also, was unsure about my 401 class decision, so I wanted to make an app that gives me that extra nudge in my decision making.</p>
+          <div>
+            <canvas id='mariochart'></canvas>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="share">
+            <h2>Be the first to tell your friends!</h2>
+            <ul class="icons">
+              <li><a href="https://www.facebook.com" target="_blank"><img src="img/website-logos/facebooklogo.png" alt="facebook"></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><img src="img/website-logos/instagramlogo.png" alt="instagram"></a></li>
+              <li><a href="https://www.twitter.com" target="_blank"><img src="img/website-logos/twitterlogo.png" alt="twitter"></a></li>
+              <li><a href="https://www.youtube.com" target="_blank"><img src="img/website-logos/youtubelogo.png" alt="youtube"></a></li>
+            </ul>
+          </div>
+          <p>&copy; Team Semi-Serious, Code Fellows 201 April 2018 Cohort</p>
+      </footer>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/about-us.js"></script>
   </body>
 </html>
