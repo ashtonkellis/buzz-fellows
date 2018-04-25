@@ -135,7 +135,7 @@ function fixCanvasSizes () {
     canvasEL.height = 400;
     canvasEL.width = 400;
   }
-  
+
 
   // fix sizes for all user cards
   for (var user of User.allUser) {
