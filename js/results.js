@@ -1,6 +1,6 @@
 var maxPoints = 16;
 
-var currentUser = User.allUser[(User.allUser.length - 1)];
+var user = User.allUser[(User.allUser.length - 1)];
 
 function addChartData () {
   var chartData = {
@@ -21,20 +21,25 @@ function addChartData () {
   return chartData;
 }
 
-function calculateChartData() {
-  currentUser.allChartData = addChartData();
-  var chartData = currentUser.allChartData.data;
+function calculateChartData(user) {
+  // declare
+  var chartId = user.username + '-results-chart';
+  console.log(chartId);
+  var ctx = document.getElementById(chartId).getContext('2d');
+
+  user.allChartData = addChartData();
+  var chartData = user.allChartData.data;
   // all courses chart - labels
   chartData.labels.push('C#');
   chartData.labels.push('Java');
   chartData.labels.push('Python');
   chartData.labels.push('JavaScript');
   // all courses chart - data
-  console.log(currentUser);
-  chartData.datasets[0].data.push(currentUser.totalPointsC);
-  chartData.datasets[0].data.push(currentUser.totalPointsJ);
-  chartData.datasets[0].data.push(currentUser.totalPointsP);
-  chartData.datasets[0].data.push(currentUser.totalPointsJ);
+  console.log(user);
+  chartData.datasets[0].data.push(user.totalPointsC);
+  chartData.datasets[0].data.push(user.totalPointsJ);
+  chartData.datasets[0].data.push(user.totalPointsP);
+  chartData.datasets[0].data.push(user.totalPointsJ);
   // all courses chart - background colors
   chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
   chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
@@ -46,8 +51,8 @@ function calculateChartData() {
   chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
   chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
 
-  var ctx = document.getElementById('user-results-chart').getContext('2d');
-  var myChart = new Chart(ctx, currentUser.allChartData);
+  // render chart
+  new Chart(ctx, user.allChartData);
 }
 
 function renderAllResults () {
@@ -68,9 +73,10 @@ function renderAllResults () {
     divEL.appendChild(canvasEL);
     // append div to all-results section
     allResultsSection.appendChild(divEL);
+    //render chart
+    calculateChartData(user);
   }
-
 }
 
 renderAllResults();
-calculateChartData();
+calculateChartData(User.allUser[0]);
