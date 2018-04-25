@@ -1,6 +1,15 @@
 /* ===========================================
          RESULTS PAGE SPECIFIC STYLING 
    =========================================== */
+canvas {
+  height: 400px;
+  width: 400px;
+}
+
+/* HERO RESULTS */
+#hero-results {
+  width: 960px;
+}
 
 /* USER CARDS */
 #all-results-section {
