@@ -105,27 +105,27 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
-function renderQuestions() {
-  //gives me an array of all the questionEl 
-  var questionBlockElArr = document.getElementsByClassName('question');
-  for(var i = 0; i < Question.numberOfQuestion; i++) {
-    //prints out the question for each question
-    var h2El = questionBlockElArr[i].getElementsByTagName('h2')[0];
-    h2El.textContent = Question.allQuestions[i].text;
-    var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
-    //renders the 4 options for the question
-    for(var j = 0; j < labelElArr.length; j++) {
-      var pEl = document.createElement('p');
-      pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
-      var imgEl = document.createElement('img');
-      imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
-      var label = labelElArr[j];
-      label.appendChild(pEl);
-      label.appendChild(imgEl);
-    }
-  }
-}
-renderQuestions();
+// function renderQuestions() {
+//   //gives me an array of all the questionEl 
+//   var questionBlockElArr = document.getElementsByClassName('question');
+//   for(var i = 0; i < Question.numberOfQuestion; i++) {
+//     //prints out the question for each question
+//     var h2El = questionBlockElArr[i].getElementsByTagName('h2')[0];
+//     h2El.textContent = Question.allQuestions[i].text;
+//     var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
+//     //renders the 4 options for the question
+//     for(var j = 0; j < labelElArr.length; j++) {
+//       var pEl = document.createElement('p');
+//       pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
+//       var imgEl = document.createElement('img');
+//       imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
+//       var label = labelElArr[j];
+//       label.appendChild(pEl);
+//       label.appendChild(imgEl);
+//     }
+//   }
+// }
+// renderQuestions();
 
 
 
