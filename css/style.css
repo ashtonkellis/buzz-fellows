@@ -94,7 +94,14 @@ main img {
 }
 
 main h1 {
-  background-color: #cf3127;
+  background-color: #2882d1;
   font-family: Helvetica, sans-serif;
   text-align: center;
+  font-size: 200%;
+  padding: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin-bottom: 20px;
 }
