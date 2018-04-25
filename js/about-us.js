@@ -1,19 +1,25 @@
 'use strict';
 console.log('JS is linked');
 
-var ctx = document.getElementById('ashtonchart').getContext('2d');
+var ctx = document.getElementById('ashtonchart');
 var ashtonChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
     datasets: [{
-      // label: '# of Votes',
-      data: [12, 19, 3, 5],
+
+      data: [2, 3, 8, 16],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
+      ],
+      borderColor:[
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
       ],
       borderWidth: 1
     }]
@@ -23,19 +29,25 @@ var ashtonChart = new Chart(ctx, {
   }
 });
 
-var ctx = document.getElementById('benchart').getContext('2d');
+var ctx = document.getElementById('benchart');
 var benChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
     datasets: [{
-      // label: '# of Votes',
-      data: [12, 19, 3, 5],
+     
+      data: [16, 2, 3, 8],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
+      ],
+      borderColor:[
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
       ],
       borderWidth: 1
     }]
@@ -45,19 +57,25 @@ var benChart = new Chart(ctx, {
   }
 });
 
-var ctx = document.getElementById('jennychart').getContext('2d');
+var ctx = document.getElementById('jennychart');
 var jennyChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
     datasets: [{
-      // label: '# of Votes',
-      data: [12, 19, 3, 5],
+      
+      data: [8, 16, 2, 3],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
+      ],
+      borderColor:[
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
       ],
       borderWidth: 1
     }]
@@ -68,19 +86,25 @@ var jennyChart = new Chart(ctx, {
 });
 
 
-var ctx = document.getElementById('mariochart').getContext('2d');
+var ctx = document.getElementById('mariochart');
 var marioChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
     datasets: [{
-      // label: '# of Votes',
-      data: [12, 19, 3, 5],
+      
+      data: [3, 8, 16, 2],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
+      ],
+      borderColor:[
+        'rgba(102, 51, 153, 1)',
+        'rgba(209, 31, 31, 1)',
+        'rgba(58, 123, 193, 1)',
+        'rgba(244, 235, 66, 1)'
       ],
       borderWidth: 1
     }]
