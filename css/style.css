@@ -42,3 +42,42 @@ canvas {
 #hero-results .text {
   width: 50%;
 }
+
+/* ===========================================
+         INDEX.HTML SPECIFIC STYLING 
+   =========================================== */
+
+header {
+  font-family: Helvetica, sans-serif;
+  background-color: #000;
+  height: 75px;
+}
+
+header img {
+  display: inline-block;
+  height: 55px;
+  margin: 10px 0 0 20px;
+}
+
+header nav {
+  float: right;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+header ul {
+  height: 100px;
+}
+
+header li {
+  display: inline-block;
+  background-color: #cf3127;
+  line-height: 55px;
+  margin: 10px 20px 0 0;
+  height: 55px;
+  width: 100px;
+  text-align: center;
+}
