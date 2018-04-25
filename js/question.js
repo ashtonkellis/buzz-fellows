@@ -215,6 +215,7 @@ function calculateProgress(x) {
       document.getElementById('progress').value = percentIncrease * (i);
     }
   }
+  document.getElementById('progress-message').textContent = x + '/' + Question.numberOfQuestion;
 }
 
 function userInputName(e) {
