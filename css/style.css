@@ -43,12 +43,11 @@ canvas {
   width: 50%;
 }
 
-/* ===========================================
-         INDEX.HTML SPECIFIC STYLING 
-   =========================================== */
+body {
+  font-family: Helvetica, sans-serif;
+}
 
 header {
-  font-family: Helvetica, sans-serif;
   background-color: #000;
   height: 75px;
   margin-bottom: 20px;
@@ -81,27 +80,4 @@ header li {
   height: 55px;
   width: 100px;
   text-align: center;
-}
-
-main {
-  margin: 0 auto;
-  width: 960px;
-}
-
-main img {
-  width: 450px;
-  height: 450px;
-}
-
-main h1 {
-  background-color: #2882d1;
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-  font-size: 200%;
-  padding: 20px;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1.25em;
-  margin-bottom: 20px;
 }
