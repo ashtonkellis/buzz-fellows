@@ -11,17 +11,21 @@ function renderQuestions() {
     var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
     //renders the 4 options for the question
     for(var j = 0; j < labelElArr.length; j++) {
-      var pEl = document.createElement('p');
-      pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
-      var imgEl = document.createElement('img');
-      imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
       var label = labelElArr[j];
-      label.appendChild(pEl);
-      label.appendChild(imgEl);
+      if(Question.allQuestions[i][Question.optionOrderArr[j]].text) {
+        var pEl = document.createElement('p');
+        pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
+        label.appendChild(pEl);
+      } else {
+        var imgEl = document.createElement('img');
+        imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
+        label.appendChild(imgEl);
+      }
     }
   }
 }
 renderQuestions();
+
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -131,3 +135,81 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var numValid = 0;
+
+
+
+// var usernameInputEl = document.querySelectorAll('form > label');
+// if(usernameInputEl.validity.valid) {
+//   numValid++;
+// }
+
+// if(numValid === 1) {
+//   progress.attr('value', '100');
+//   progressMessage.text('Hello user');
+// }
