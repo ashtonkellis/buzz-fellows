@@ -1,7 +1,8 @@
+/* global Question User*/
 'use strict';
 
 function renderQuestions() {
-  //gives me an array of all the questionEl 
+  //gives me an array of all the questionEl
   var questionBlockElArr = document.getElementsByClassName('question');
   for(var i = 0; i < Question.numberOfQuestion; i++) {
     //prints out the question for each question
@@ -10,20 +11,24 @@ function renderQuestions() {
     var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
     //renders the 4 options for the question
     for(var j = 0; j < labelElArr.length; j++) {
-      var pEl = document.createElement('p');
-      pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
-      var imgEl = document.createElement('img');
-      imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
       var label = labelElArr[j];
-      label.appendChild(pEl);
-      label.appendChild(imgEl);
+      if(Question.allQuestions[i][Question.optionOrderArr[j]].text) {
+        var pEl = document.createElement('p');
+        pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
+        label.appendChild(pEl);
+      } else {
+        var imgEl = document.createElement('img');
+        imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
+        label.appendChild(imgEl);
+      }
     }
   }
 }
 renderQuestions();
+
 function handleSubmit(event) {
   event.preventDefault();
-  
+
   var username = document.getElementById('username').value;
   // variables to pass to new User constructor
   var userPointsC = 0;
@@ -107,7 +112,7 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 // function renderQuestions() {
-//   //gives me an array of all the questionEl 
+//   //gives me an array of all the questionEl
 //   var questionBlockElArr = document.getElementsByClassName('question');
 //   for(var i = 0; i < Question.numberOfQuestion; i++) {
 //     //prints out the question for each question
@@ -130,3 +135,84 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var numValid = 0;
+
+
+var usernameInputEl = document.getElementsByTagName('input')[0];
+function userInputName() {
+  if(usernameInputEl.validity.valid) {
+    numValid++;
+  }
+  if(numValid === 1) {
+    document.getElementById('progress').value = 100;
+    document.getElementById('progress-message').textContent = 'Hello user';
+  }
+}
+
+
+usernameInputEl.addEventListener('blur', userInputName);
