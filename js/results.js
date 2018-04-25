@@ -14,7 +14,7 @@ function addChartData () {
       }]
     },
     options: {
-      rotation: -0.5 * Math.PI,
+      rotation: -1.25 * Math.PI,
     }
   };
   return chartData;
@@ -85,11 +85,24 @@ function calculateAllChartData(user) {
 
 function renderHeroCharts (user) {
   console.log(user, 'hero');
-  
+  // render C sharp chart
+  var chartId, ctx;
+  chartId = 'hero-results-c';
+  ctx = document.getElementById(chartId).getContext('2d');
+  new Chart(ctx, user.CChartData); //eslint-disable-line
+  // render Java sharp chart
+  chartId = 'hero-results-j';
+  ctx = document.getElementById(chartId).getContext('2d');
+  new Chart(ctx, user.JChartData); //eslint-disable-line
+  // render Python sharp chart
+  chartId = 'hero-results-p';
+  ctx = document.getElementById(chartId).getContext('2d');
+  new Chart(ctx, user.PChartData); //eslint-disable-line
+  // render JavaScript chart
+  chartId = 'hero-results-s';
+  ctx = document.getElementById(chartId).getContext('2d');
+  new Chart(ctx, user.SChartData); //eslint-disable-line  
 }
-
-var heroUser = User.allUser[User.allUser.length - 1];
-renderHeroCharts(heroUser);
 
 function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');
@@ -109,10 +122,18 @@ function renderAllUserCards () {
     divEL.appendChild(canvasEL);
     // append div to all-results section
     allResultsSection.appendChild(divEL);
-    //render chart
-    var test = document.getElementById(canvasId);
-    test.height = 400;
-    test.width = 400;
+    //render chart (for some reason, i must resize here or the canvas element will not keep their size)
+    var canvas = document.getElementById(canvasId);
+    canvas.height = 400;
+    canvas.width = 400;
+  }
+}
+
+function fixCanvasSizes () {
+  var allCanvasElements = document.getElementsByTagName('canvas');
+  for (var canvasEL of allCanvasElements) {
+    canvasEL.height = 400;
+    canvasEL.width = 400;
   }
 }
 
@@ -129,6 +150,8 @@ function renderAllResultCharts() {
 }
 
 calculateAllChartData();
-
+// render hero charts
+renderHeroCharts(User.allUser[User.allUser.length - 1]);
+// render all user charts
 renderAllUserCards();
 renderAllResultCharts();
