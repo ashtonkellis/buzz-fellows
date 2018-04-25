@@ -76,4 +76,11 @@ function renderAllUserCards () {
   }
 }
 
+function renderAllResultCharts() {
+  for (var user of User.allUser) {
+    calculateChartData(user);
+  }
+}
+
 renderAllUserCards();
+renderAllResultCharts();
