@@ -1,9 +1,16 @@
 /* ===========================================
          RESULTS PAGE SPECIFIC STYLING 
    =========================================== */
-.chart-container {
-  width:200px !important;
-  height:200px !important;
+* {
+  box-sizing: border-box;
+}
+
+   .chart-container {
+  width: 200px !important;
+  height: 100px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 /* HERO RESULTS */
@@ -19,16 +26,15 @@
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
-  width: 80%;
-  max-width: 960px;
   margin: auto;
 }
 
 #all-results-section > div {
-  border: 1px solid black;
   padding: 30px;
-  margin: 30px;
+  margin: 10px 0;
+  border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 20px 10px 10px #888;
 }
 
 #hero-results {
@@ -41,9 +47,17 @@
   display: flex;
   justify-content: center;
   border: 1px solid black;
-  padding: 30px;
+  padding: 10px;
 }
 
 #hero-results .text {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hero-results .text * {
+  margin: 0;
+  padding: 10px;
 }
