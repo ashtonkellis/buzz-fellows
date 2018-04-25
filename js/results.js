@@ -1,5 +1,5 @@
 /* global User */
-User.maxPoints = 16;
+User.maxPoints = 10;
 
 function addChartData () {
   var chartData = {
@@ -15,6 +15,7 @@ function addChartData () {
     },
     options: {
       rotation: -1.25 * Math.PI,
+      responsive: true,
     }
   };
   return chartData;
@@ -122,27 +123,6 @@ function renderAllUserCards () {
     divEL.appendChild(canvasEL);
     // append div to all-results section
     allResultsSection.appendChild(divEL);
-    //render chart (for some reason, i must resize here or the canvas element will not keep their size)
-  }
-}
-
-function fixCanvasSizes () {
-  var canvasEL, canvasId;
-  var heroChartIds = ['c', 'j', 'p', 's'];
-  for (var suffix of heroChartIds) {
-    canvasId = 'hero-results-' + suffix;
-    canvasEL = document.getElementById(canvasId);
-    canvasEL.height = 400;
-    canvasEL.width = 400;
-  }
-  
-
-  // fix sizes for all user cards
-  for (var user of User.allUser) {
-    canvasId = user.username + '-results-chart';
-    canvasEL = document.getElementById(canvasId);
-    canvasEL.height = 400;
-    canvasEL.width = 400;
   }
 }
 
@@ -161,7 +141,6 @@ function renderAllResultCharts() {
 calculateAllChartData();
 // render all user charts
 renderAllUserCards();
-fixCanvasSizes();
 renderAllResultCharts();
 // render hero charts
 renderHeroCharts(User.allUser[User.allUser.length - 1]);

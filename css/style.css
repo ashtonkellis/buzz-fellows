@@ -1,14 +1,16 @@
 /* ===========================================
          RESULTS PAGE SPECIFIC STYLING 
    =========================================== */
-canvas {
-  height: 400px;
-  width: 400px;
+.chart-container {
+  width:200px !important;
+  height:200px !important;
 }
 
 /* HERO RESULTS */
 #hero-results {
-  width: 960px;
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
 }
 
 /* USER CARDS */
@@ -17,6 +19,9 @@ canvas {
   justify-content: space-evenly;
   text-align: center;
   flex-wrap: wrap;
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
 }
 
 #all-results-section > div {
