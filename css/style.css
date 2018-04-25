@@ -20,23 +20,6 @@
   margin: auto;
 }
 
-/* USER CARDS */
-#all-results-section {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-#all-results-section > div {
-  padding: 30px;
-  margin: 10px 0;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 20px 10px 10px #888;
-}
-
 #hero-results {
   display: flex;
   justify-content: space-evenly;
@@ -61,3 +44,21 @@
   margin: 0;
   padding: 10px;
 }
+
+/* USER CARDS */
+#all-results-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#all-results-section > div {
+  padding: 30px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px #888;
+}
+

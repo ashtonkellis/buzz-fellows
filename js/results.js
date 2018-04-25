@@ -1,6 +1,10 @@
 /* global User */
 User.maxPoints = 16;
 
+Chart.defaults.global.legend.position = 'top';
+Chart.defaults.global.legend.labels.boxWidth = 8;
+Chart.defaults.global.legend.labels.fontSize = 8;
+
 function addChartData () {
   var chartData = {
     type: 'doughnut',
@@ -113,7 +117,10 @@ function renderAllUserCards () {
   for (var user of User.allUser.reverse()) {
     // create user-card div
     var divEL = document.createElement('div');
-    divEL.class = 'user-card';
+    divEL.className = 'user-card';
+    // create canvas/chart container div
+    var chartContainerDivEL = document.createElement('div');
+    chartContainerDivEL.className = 'chart-container';
     // create h3 element
     var h3EL = document.createElement('h3');
     h3EL.textContent = user.username;
@@ -123,7 +130,8 @@ function renderAllUserCards () {
     canvasEL.id = canvasId;
     // append elements to div
     divEL.appendChild(h3EL);
-    divEL.appendChild(canvasEL);
+    chartContainerDivEL.appendChild(canvasEL);
+    divEL.appendChild(chartContainerDivEL);
     // append div to all-results section
     allResultsSection.appendChild(divEL);
   }
