@@ -8,8 +8,7 @@
   
   <body>
     <header>
-      <img src="http://via.placeholder.com/100x100">
-      <h1>Buzz Fellows</h1>
+      <img src="img/buzzfellows-alt.png">
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -17,14 +16,63 @@
           <li>Results</li>
         </ul>
       </nav>
+      <div class="share">
+        <h2>Share your results</h2>
+        <ul class="icons">
+          <li><a href="https://www.facebook.com" target="_blank"><img src="img/website-logos/facebooklogo.png" alt="facebook"></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><img src="img/website-logos/instagramlogo.png" alt="instagram"></a></li>
+          <li><a href="https://www.twitter.com" target="_blank"><img src="img/website-logos/twitterlogo.png" alt="twitter"></a></li>
+          <li><a href="https://www.youtube.com" target="_blank"><img src="img/website-logos/youtubelogo.png" alt="youtube"></a></li>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <section>
-        <div>Your Results!</div>
-        <canvas id="user-results-chart"></canvas>
+      <h2>Here are your results <span id="hero-username"></span>!</h2>
+      <section id="hero-results">
+        <div>
+          <div class="chart-container">
+            <canvas id="hero-results-c"></canvas>
+          </div>
+          <div class="text">
+            <h3>C#</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias architecto nulla sunt, aut eius eum inventore nobis maiores expedita facilis!</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="chart-container">
+            <canvas id="hero-results-j"></canvas>
+          </div>
+          <div class="text">
+            <h3>Java</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias architecto nulla sunt, aut eius eum inventore nobis maiores expedita facilis!</p>
+          </div>
+        </div>
+          
+          <div>
+            <div class="chart-container">
+              <canvas id="hero-results-p"></canvas>
+            </div>
+              <div class="text">
+                <h3>Python</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias architecto nulla sunt, aut eius eum inventore nobis maiores expedita facilis!</p>
+              </div>
+            </div>
+            
+          <div>
+            <div class="chart-container">
+              <canvas id="hero-results-s"></canvas>
+            </div>
+            <div class="text">
+              <h3>JavaScript</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias architecto nulla sunt, aut eius eum inventore nobis maiores expedita facilis!</p>
+            </div>
+          </div>            
       </section>
-      <section id="all-results-section">Here are the Past Results</section>
+      
+      <h2>Other User Results</h2>
+      <section id="all-results-section"></section>
     </main>
 
     <footer></footer>
