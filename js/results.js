@@ -127,6 +127,10 @@ function renderAllUserCards () {
     // create canvas element
     var canvasEL = document.createElement('canvas');
     var canvasId = user.username + '-results-chart';
+    if (document.getElementById(canvasId)) {
+      user.username += Math.random();
+      canvasId = user.username + '-results-chart';
+    }
     canvasEL.id = canvasId;
     // append elements to div
     divEL.appendChild(h3EL);
@@ -139,25 +143,25 @@ function renderAllUserCards () {
   }
 }
 
-function fixCanvasSizes () {
-  var canvasEL, canvasId;
-  var heroChartIds = ['c', 'j', 'p', 's'];
-  for (var suffix of heroChartIds) {
-    canvasId = 'hero-results-' + suffix;
-    canvasEL = document.getElementById(canvasId);
-    canvasEL.height = 400;
-    canvasEL.width = 400;
-  }
+// function fixCanvasSizes () {
+//   var canvasEL, canvasId;
+//   var heroChartIds = ['c', 'j', 'p', 's'];
+//   for (var suffix of heroChartIds) {
+//     canvasId = 'hero-results-' + suffix;
+//     canvasEL = document.getElementById(canvasId);
+//     canvasEL.height = 400;
+//     canvasEL.width = 400;
+//   }
 
 
-  // fix sizes for all user cards
-  for (var user of User.allUser) {
-    canvasId = user.username + '-results-chart';
-    canvasEL = document.getElementById(canvasId);
-    canvasEL.height = 400;
-    canvasEL.width = 400;
-  }
-}
+//   // fix sizes for all user cards
+//   for (var user of User.allUser) {
+//     canvasId = user.username + '-results-chart';
+//     canvasEL = document.getElementById(canvasId);
+//     canvasEL.height = 400;
+//     canvasEL.width = 400;
+//   }
+// }
 
 function renderResultCharts(user) {
   var chartId = user.username + '-results-chart';
