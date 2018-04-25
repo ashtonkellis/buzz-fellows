@@ -156,8 +156,6 @@ function fixCanvasSizes () {
     canvasEL = document.getElementById(canvasId);
     canvasEL.height = 400;
     canvasEL.width = 400;
-=======
-
   }
 }
 
