@@ -19,6 +19,16 @@ main {
   flex-direction: column;
 }
 
+/* ICONS */
+.icons img {
+  height: 40px;
+  width: 40px;
+}
+
+.icons li {
+  display: inline-block;
+}
+
 /* HERO RESULTS */
 #hero-results {
   width: 80%;
