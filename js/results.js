@@ -1,4 +1,4 @@
-/* global User */
+/* global User Chart*/
 User.maxPoints = 16;
 
 Chart.defaults.global.legend.position = 'top';
@@ -92,7 +92,7 @@ function renderHeroCharts (user) {
   // change username in header above charts
   var spanEL = document.getElementById('hero-username');
   spanEL.textContent = user.username;
-  
+
   // render C sharp chart
   var chartId, ctx;
   chartId = 'hero-results-c';
@@ -114,7 +114,7 @@ function renderHeroCharts (user) {
 
 function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');
-  for (var user of User.allUser.reverse()) {
+  for (var user of User.allUser.slice().reverse()) {
     // create user-card div
     var divEL = document.createElement('div');
     divEL.className = 'user-card';
