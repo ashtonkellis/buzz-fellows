@@ -10,10 +10,10 @@ Question.optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionS'];
 User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
 
 if (User.allUser.length === 0) {
-  new User('Ashton', 1, 2, 3, 4);
-  new User('Ben', 2, 3, 4, 1);
-  new User('Jenny', 3, 4, 1, 2);
-  new User('Mario', 4, 1, 2, 3);
+  new User('Ashton', 2, 3, 8, 16);
+  new User('Ben', 16, 2, 3, 8);
+  new User('Jenny', 8, 16, 2, 3);
+  new User('Mario', 3, 8, 16, 2);
 }
 
 function User(username, totalPointsC, totalPointsJ, totalPointsP, totalPointsS) { //eslint-disable-line

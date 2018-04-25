@@ -1,5 +1,5 @@
 /* global User */
-User.maxPoints = 10;
+User.maxPoints = 16;
 
 function addChartData () {
   var chartData = {
@@ -14,7 +14,7 @@ function addChartData () {
       }]
     },
     options: {
-      rotation: -1.25 * Math.PI,
+      rotation: -1.0 * Math.PI,
       responsive: true,
     }
   };
@@ -46,7 +46,7 @@ function calculateAllChartData(user) {
       'rgba(209, 31, 31, 1)',
       'rgba(58, 123, 193, 1)',
       'rgba(244, 235, 66, 1)');
-
+    //CALCULATE DATA FOR INDIVIDUAL CHARTS
     // make empty data sets for each 401 course
     user.CChartData = addChartData();
     user.JChartData = addChartData();
@@ -85,7 +85,10 @@ function calculateAllChartData(user) {
 }
 
 function renderHeroCharts (user) {
-  console.log(user, 'hero');
+  // change username in header above charts
+  var spanEL = document.getElementById('hero-username');
+  spanEL.textContent = user.username;
+  
   // render C sharp chart
   var chartId, ctx;
   chartId = 'hero-results-c';
