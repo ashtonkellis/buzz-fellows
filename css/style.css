@@ -1,0 +1,44 @@
+/* ===========================================
+         RESULTS PAGE SPECIFIC STYLING 
+   =========================================== */
+canvas {
+  height: 400px;
+  width: 400px;
+}
+
+/* HERO RESULTS */
+#hero-results {
+  width: 960px;
+}
+
+/* USER CARDS */
+#all-results-section {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#all-results-section > div {
+  border: 1px solid black;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+#hero-results {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#hero-results > div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+#hero-results .text {
+  width: 50%;
+}

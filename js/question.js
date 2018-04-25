@@ -1,7 +1,8 @@
+/* global Question User*/
 'use strict';
 
 function renderQuestions() {
-  //gives me an array of all the questionEl 
+  //gives me an array of all the questionEl
   var questionBlockElArr = document.getElementsByClassName('question');
   for(var i = 0; i < Question.numberOfQuestion; i++) {
     //prints out the question for each question
@@ -23,7 +24,7 @@ function renderQuestions() {
 renderQuestions();
 function handleSubmit(event) {
   event.preventDefault();
-  
+
   var username = document.getElementById('username').value;
   // variables to pass to new User constructor
   var userPointsC = 0;
@@ -107,7 +108,7 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 // function renderQuestions() {
-//   //gives me an array of all the questionEl 
+//   //gives me an array of all the questionEl
 //   var questionBlockElArr = document.getElementsByClassName('question');
 //   for(var i = 0; i < Question.numberOfQuestion; i++) {
 //     //prints out the question for each question
