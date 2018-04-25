@@ -1,6 +1,5 @@
+/* global User */
 var maxPoints = 16;
-
-var user = User.allUser[(User.allUser.length - 1)];
 
 function addChartData () {
   var chartData = {
@@ -39,7 +38,7 @@ function calculateChartData(user) {
   chartData.datasets[0].data.push(user.totalPointsC);
   chartData.datasets[0].data.push(user.totalPointsJ);
   chartData.datasets[0].data.push(user.totalPointsP);
-  chartData.datasets[0].data.push(user.totalPointsJ);
+  chartData.datasets[0].data.push(user.totalPointsS);
   // all courses chart - background colors
   chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
   chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
