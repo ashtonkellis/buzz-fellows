@@ -5,7 +5,13 @@
   box-sizing: border-box;
 }
 
-   .chart-container {
+main {
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.chart-container {
   width: 200px !important;
   height: 100px !important;
   display: flex;
@@ -61,4 +67,3 @@
   border-radius: 10px;
   box-shadow: 10px 5px 5px #888;
 }
-
