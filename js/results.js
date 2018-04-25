@@ -1,4 +1,5 @@
 /* global User */
+User.maxPoints = 16;
 
 function addChartData () {
   var chartData = {
@@ -21,36 +22,74 @@ function addChartData () {
 
 function calculateAllChartData(user) {
   for (user of User.allUser) {
+    // CALCULATE DATA FOR THE COMBINED CHART
     user.allChartData = addChartData();
     var chartData = user.allChartData.data;
-    // all courses chart - labels
-    chartData.labels.push('C#');
-    chartData.labels.push('Java');
-    chartData.labels.push('Python');
-    chartData.labels.push('JavaScript');
-    // all courses chart - data
-    chartData.datasets[0].data.push(user.totalPointsC);
-    chartData.datasets[0].data.push(user.totalPointsJ);
-    chartData.datasets[0].data.push(user.totalPointsP);
-    chartData.datasets[0].data.push(user.totalPointsS);
-    // all courses chart - background colors
-    chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
-    // all courses chart - border colors
-    chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
-    chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
+    chartData.labels.push(
+      'C#',
+      'Java',
+      'Python',
+      'JavaScript');
+    chartData.datasets[0].data.push(
+      user.totalPointsC,
+      user.totalPointsJ,
+      user.totalPointsP,
+      user.totalPointsS);
+    chartData.datasets[0].backgroundColor.push(
+      'rgba(102, 51, 153, 1)',
+      'rgba(209, 31, 31, 1)',
+      'rgba(58, 123, 193, 1)',
+      'rgba(244, 235, 66, 1)');
+    chartData.datasets[0].borderColor.push(
+      'rgba(102, 51, 153, 1)',
+      'rgba(209, 31, 31, 1)',
+      'rgba(58, 123, 193, 1)',
+      'rgba(244, 235, 66, 1)');
 
+    // make empty data sets for each 401 course
     user.CChartData = addChartData();
     user.JChartData = addChartData();
     user.PChartData = addChartData();
     user.SChartData = addChartData();
+    // push in labels
+    user.CChartData.data.labels.push('C#');
+    user.JChartData.data.labels.push('Java');
+    user.PChartData.data.labels.push('Python');
+    user.SChartData.data.labels.push('JavaScript');
+    // push in data
+    user.CChartData.data.datasets[0].data.push(
+      user.totalPointsC, (User.maxPoints - user.totalPointsC)
+    );
+    user.JChartData.data.datasets[0].data.push(
+      user.totalPointsJ, (User.maxPoints - user.totalPointsJ)
+    );
+    user.PChartData.data.datasets[0].data.push(
+      user.totalPointsP, (User.maxPoints - user.totalPointsP)
+    );
+    user.SChartData.data.datasets[0].data.push(
+      user.totalPointsS, (User.maxPoints - user.totalPointsS)
+    );
+    // push in background colors
+    user.CChartData.data.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)', 'rgba(0, 0, 0, 0)');
+    user.JChartData.data.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
+    user.PChartData.data.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
+    user.SChartData.data.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
+    // push in border colors
+    user.CChartData.data.datasets[0].borderColor.push('rgba(102, 51, 153, 1)', 'rgba(0, 0, 0, 0)');
+    user.JChartData.data.datasets[0].borderColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
+    user.PChartData.data.datasets[0].borderColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
+    user.SChartData.data.datasets[0].borderColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
     console.log(user);
   }
 }
+
+function renderHeroCharts (user) {
+  console.log(user, 'hero');
+  
+}
+
+var heroUser = User.allUser[User.allUser.length - 1];
+renderHeroCharts(heroUser);
 
 function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');

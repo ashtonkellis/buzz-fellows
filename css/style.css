@@ -15,20 +15,19 @@
   padding: 30px;
 }
 
-#user-results {
+#hero-results {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
 
-#user-results > div {
+#hero-results > div {
   display: flex;
   justify-content: center;
   border: 1px solid black;
   padding: 30px;
 }
 
-#user-results .text {
-  background-color: red;
+#hero-results .text {
   width: 50%;
 }
