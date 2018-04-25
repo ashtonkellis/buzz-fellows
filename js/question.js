@@ -200,16 +200,19 @@ formEl.addEventListener('submit', handleSubmit);
 
 
 
-// var numValid = 0;
+var numValid = 0;
 
 
+var usernameInputEl = document.getElementsByTagName('input')[0];
+function userInputName() {
+  if(usernameInputEl.validity.valid) {
+    numValid++;
+  }
+  if(numValid === 1) {
+    document.getElementById('progress').value = 100;
+    document.getElementById('progress-message').textContent = 'Hello user';
+  }
+}
 
-// var usernameInputEl = document.querySelectorAll('form > label');
-// if(usernameInputEl.validity.valid) {
-//   numValid++;
-// }
 
-// if(numValid === 1) {
-//   progress.attr('value', '100');
-//   progressMessage.text('Hello user');
-// }
+usernameInputEl.addEventListener('blur', userInputName);
