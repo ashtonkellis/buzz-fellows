@@ -1,0 +1,19 @@
+/* ===========================================
+         RESULTS PAGE SPECIFIC STYLING 
+   =========================================== */
+
+/* USER CARDS */
+#all-results-section {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#all-results-section > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#all-results-section canvas {
+  border: 1px solid black;
+}

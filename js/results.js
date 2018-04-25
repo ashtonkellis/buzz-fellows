@@ -1,5 +1,4 @@
 /* global User */
-var maxPoints = 16;
 
 function addChartData () {
   var chartData = {
@@ -23,7 +22,6 @@ function addChartData () {
 function calculateChartData(user) {
   // declare
   var chartId = user.username + '-results-chart';
-  console.log(chartId);
   var ctx = document.getElementById(chartId).getContext('2d');
 
   user.allChartData = addChartData();
@@ -34,7 +32,6 @@ function calculateChartData(user) {
   chartData.labels.push('Python');
   chartData.labels.push('JavaScript');
   // all courses chart - data
-  console.log(user);
   chartData.datasets[0].data.push(user.totalPointsC);
   chartData.datasets[0].data.push(user.totalPointsJ);
   chartData.datasets[0].data.push(user.totalPointsP);
@@ -51,10 +48,10 @@ function calculateChartData(user) {
   chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
 
   // render chart
-  new Chart(ctx, user.allChartData);
+  new Chart(ctx, user.allChartData); //eslint-disable-line
 }
 
-function renderAllResults () {
+function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');
   for (var user of User.allUser) {
     // create user-card div
@@ -73,9 +70,10 @@ function renderAllResults () {
     // append div to all-results section
     allResultsSection.appendChild(divEL);
     //render chart
-    calculateChartData(user);
+    var test = document.getElementById(canvasId);
+    test.height = 400;
+    test.width = 400;
   }
 }
 
-renderAllResults();
-calculateChartData(User.allUser[0]);
+renderAllUserCards();
