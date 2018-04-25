@@ -51,6 +51,7 @@ header {
   font-family: Helvetica, sans-serif;
   background-color: #000;
   height: 75px;
+  margin-bottom: 20px;
 }
 
 header img {
@@ -63,7 +64,7 @@ header nav {
   float: right;
 }
 
-a {
+header a {
   color: #FFF;
   text-decoration: none;
 }
@@ -79,5 +80,21 @@ header li {
   margin: 10px 20px 0 0;
   height: 55px;
   width: 100px;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  width: 960px;
+}
+
+main img {
+  width: 450px;
+  height: 450px;
+}
+
+main h1 {
+  background-color: #cf3127;
+  font-family: Helvetica, sans-serif;
   text-align: center;
 }
