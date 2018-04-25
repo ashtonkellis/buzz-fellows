@@ -3,7 +3,7 @@
 
 Question.allQuestions = [];
 
-Question.numberOfQuestion = 2; // Set to 2 atm because only two questions made
+Question.numberOfQuestion = 8; // Set to 2 atm because only two questions made
 Question.optionOrderArr = ['optionC', 'optionJ', 'optionP', 'optionS'];
 
 User.allUser = JSON.parse(localStorage.getItem('pastUsers')) || [];
@@ -55,10 +55,10 @@ new Question (
 new Question (
   'question2',
   'Which company interests you the most?',
-  new Option ('img/microsoftlogo.png', '', 2, 0, 0, 1),
-  new Option ('img/amazonlogo.png', '', 0, 2, 1, 0),
-  new Option ('img/boeinglogo.png', '', 0, 1, 2, 0),
-  new Option ('img/adobelogo', '', 1, 0, 0, 2)
+  new Option ('img/company-logos/microsoftlogo.png', '', 2, 0, 0, 1),
+  new Option ('img/company-logos/amazonlogo.png', '', 0, 2, 1, 0),
+  new Option ('img/company-logos/boeinglogo.png', '', 0, 1, 2, 0),
+  new Option ('img/company-logos/adobelogo.png', '', 1, 0, 0, 2)
 );
 
 new Question (
@@ -91,28 +91,28 @@ new Question (
 new Question (
   'question6',
   'Pick your favorite goat',
-  new Option ('img/sweater-goat.jpg', '', 2, 2, 2, 2),
-  new Option ('img/tongue.jpg', '', 2, 2, 2, 2),
-  new Option ('img/flower-goat.jpg', '', 2, 2, 2, 2),
-  new Option ('img/jumping.jpg', '', 2, 2, 2, 2)
+  new Option ('img/goats/sweater-goat.jpg', '', 2, 2, 2, 2),
+  new Option ('img/goats/tongue.jpg', '', 2, 2, 2, 2),
+  new Option ('img/goats/flower-goat.jpg', '', 2, 2, 2, 2),
+  new Option ('img/goats/jumping.jpg', '', 2, 2, 2, 2)
 );
 
 new Question (
   'question7',
   'What do you drink in the morning?',
-  new Option ('img/tea.jpg', '', 2, 1, 0, 0),
-  new Option ('img/coffee.jpg', '', 0, 2, 0, 1),
-  new Option ('img/smoothie.jpg', '', 1, 0, 2, 0),
-  new Option ('img/orange.jpg', '', 0, 0, 1, 2)
+  new Option ('img/drinks/tea.jpg', '', 2, 1, 0, 0),
+  new Option ('img/drinks/coffee.jpg', '', 0, 2, 0, 1),
+  new Option ('img/drinks/smoothie.jpg', '', 1, 0, 2, 0),
+  new Option ('img/drinks/orange.jpg', '', 0, 0, 1, 2)
 );
 
 new Question (
   'question8',
   'What is your favorite website?',
-  new Option ('img/twitterlogo.png', '', 2, 0, 1, 0),
-  new Option ('img/instagramlogo.png', '', 0, 2, 0, 1),
-  new Option ('img/youtubelogo.png', '', 1, 0, 2, 0),
-  new Option ('img/facebooklogo.png', '', 0, 1, 0, 2)
+  new Option ('img/website-logos/twitterlogo.png', '', 2, 0, 1, 0),
+  new Option ('img/website-logos/instagramlogo.png', '', 0, 2, 0, 1),
+  new Option ('img/website-logos/youtubelogo.png', '', 1, 0, 2, 0),
+  new Option ('img/website-logos/facebooklogo.png', '', 0, 1, 0, 2)
 );
 
 // console.log(allQuestions[0]);
