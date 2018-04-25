@@ -1,3 +1,4 @@
+/* global User */
 'use strict';
 // C#, Java, Python, JavaScript
 
