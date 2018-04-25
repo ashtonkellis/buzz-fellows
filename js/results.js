@@ -1,5 +1,9 @@
-/* global User */
+/* global User Chart*/
 User.maxPoints = 16;
+
+Chart.defaults.global.legend.position = 'top';
+Chart.defaults.global.legend.labels.boxWidth = 8;
+Chart.defaults.global.legend.labels.fontSize = 8;
 
 function addChartData () {
   var chartData = {
@@ -14,7 +18,8 @@ function addChartData () {
       }]
     },
     options: {
-      rotation: -1.25 * Math.PI,
+      rotation: -1.0 * Math.PI,
+      responsive: true,
     }
   };
   return chartData;
@@ -45,7 +50,7 @@ function calculateAllChartData(user) {
       'rgba(209, 31, 31, 1)',
       'rgba(58, 123, 193, 1)',
       'rgba(244, 235, 66, 1)');
-
+    //CALCULATE DATA FOR INDIVIDUAL CHARTS
     // make empty data sets for each 401 course
     user.CChartData = addChartData();
     user.JChartData = addChartData();
@@ -84,7 +89,10 @@ function calculateAllChartData(user) {
 }
 
 function renderHeroCharts (user) {
-  console.log(user, 'hero');
+  // change username in header above charts
+  var spanEL = document.getElementById('hero-username');
+  spanEL.textContent = user.username;
+
   // render C sharp chart
   var chartId, ctx;
   chartId = 'hero-results-c';
@@ -106,10 +114,13 @@ function renderHeroCharts (user) {
 
 function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');
-  for (var user of User.allUser.reverse()) {
+  for (var user of User.allUser.slice().reverse()) {
     // create user-card div
     var divEL = document.createElement('div');
-    divEL.class = 'user-card';
+    divEL.className = 'user-card';
+    // create canvas/chart container div
+    var chartContainerDivEL = document.createElement('div');
+    chartContainerDivEL.className = 'chart-container';
     // create h3 element
     var h3EL = document.createElement('h3');
     h3EL.textContent = user.username;
@@ -119,9 +130,11 @@ function renderAllUserCards () {
     canvasEL.id = canvasId;
     // append elements to div
     divEL.appendChild(h3EL);
-    divEL.appendChild(canvasEL);
+    chartContainerDivEL.appendChild(canvasEL);
+    divEL.appendChild(chartContainerDivEL);
     // append div to all-results section
     allResultsSection.appendChild(divEL);
+
     //render chart (for some reason, i must resize here or the canvas element will not keep their size)
   }
 }
@@ -143,6 +156,8 @@ function fixCanvasSizes () {
     canvasEL = document.getElementById(canvasId);
     canvasEL.height = 400;
     canvasEL.width = 400;
+=======
+
   }
 }
 
@@ -161,7 +176,6 @@ function renderAllResultCharts() {
 calculateAllChartData();
 // render all user charts
 renderAllUserCards();
-fixCanvasSizes();
 renderAllResultCharts();
 // render hero charts
 renderHeroCharts(User.allUser[User.allUser.length - 1]);
