@@ -19,41 +19,42 @@ function addChartData () {
   return chartData;
 }
 
-function calculateChartData(user) {
-  // declare
-  var chartId = user.username + '-results-chart';
-  var ctx = document.getElementById(chartId).getContext('2d');
+function calculateAllChartData(user) {
+  for (user of User.allUser) {
+    user.allChartData = addChartData();
+    var chartData = user.allChartData.data;
+    // all courses chart - labels
+    chartData.labels.push('C#');
+    chartData.labels.push('Java');
+    chartData.labels.push('Python');
+    chartData.labels.push('JavaScript');
+    // all courses chart - data
+    chartData.datasets[0].data.push(user.totalPointsC);
+    chartData.datasets[0].data.push(user.totalPointsJ);
+    chartData.datasets[0].data.push(user.totalPointsP);
+    chartData.datasets[0].data.push(user.totalPointsS);
+    // all courses chart - background colors
+    chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
+    // all courses chart - border colors
+    chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
+    chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
 
-  user.allChartData = addChartData();
-  var chartData = user.allChartData.data;
-  // all courses chart - labels
-  chartData.labels.push('C#');
-  chartData.labels.push('Java');
-  chartData.labels.push('Python');
-  chartData.labels.push('JavaScript');
-  // all courses chart - data
-  chartData.datasets[0].data.push(user.totalPointsC);
-  chartData.datasets[0].data.push(user.totalPointsJ);
-  chartData.datasets[0].data.push(user.totalPointsP);
-  chartData.datasets[0].data.push(user.totalPointsS);
-  // all courses chart - background colors
-  chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
-  // all courses chart - border colors
-  chartData.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)');
-  chartData.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)');
-
-  // render chart
-  new Chart(ctx, user.allChartData); //eslint-disable-line
+    user.CChartData = addChartData();
+    user.JChartData = addChartData();
+    user.PChartData = addChartData();
+    user.SChartData = addChartData();
+    console.log(user);
+  }
 }
 
 function renderAllUserCards () {
   var allResultsSection = document.getElementById('all-results-section');
-  for (var user of User.allUser) {
+  for (var user of User.allUser.reverse()) {
     // create user-card div
     var divEL = document.createElement('div');
     divEL.class = 'user-card';
@@ -76,11 +77,19 @@ function renderAllUserCards () {
   }
 }
 
+function renderResultCharts(user) {
+  var chartId = user.username + '-results-chart';
+  var ctx = document.getElementById(chartId).getContext('2d');
+  new Chart(ctx, user.allChartData); //eslint-disable-line
+}
+
 function renderAllResultCharts() {
   for (var user of User.allUser) {
-    calculateChartData(user);
+    renderResultCharts(user);
   }
 }
+
+calculateAllChartData();
 
 renderAllUserCards();
 renderAllResultCharts();
