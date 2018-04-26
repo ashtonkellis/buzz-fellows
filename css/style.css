@@ -223,6 +223,19 @@ footer p {
   padding: 10px;
 }
 
+.developer span,
+.developer a {
+  color: white;
+}
+
+.developer p:last-of-type {
+  display: inline-block; 
+  text-align: center;
+  margin: auto;
+  color: white;
+
+}
+
 .developer img {
   height: 200px;
   width: 200px;
@@ -239,6 +252,7 @@ footer p {
 .developer p {
   color: white;
   line-height: 1.25;
+  padding: 10px;
 }
 
 .developer .chart-container {
