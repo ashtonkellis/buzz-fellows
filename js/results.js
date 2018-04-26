@@ -117,7 +117,6 @@ function renderHeroCharts (user) {
   document.getElementById('hero-div-j').style.order = -user.totalPointsJ;
   document.getElementById('hero-div-p').style.order = -user.totalPointsP;
   document.getElementById('hero-div-s').style.order = -user.totalPointsS;
-
 }
 
 function renderAllUserCards () {
