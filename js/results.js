@@ -46,7 +46,7 @@ function calculateAllChartData() {
       user.totalPointsP,
       user.totalPointsS);
     chartData.datasets[0].backgroundColor.push(
-      'rgba(102, 51, 153, 1)',
+      'rgba(153, 51, 153, 1)',
       'rgba(209, 31, 31, 1)',
       'rgba(58, 123, 193, 1)',
       'rgba(244, 235, 66, 1)');
@@ -81,7 +81,7 @@ function calculateAllChartData() {
       user.totalPointsS, (User.maxPoints - user.totalPointsS)
     );
     // push in background colors
-    user.CChartData.data.datasets[0].backgroundColor.push('rgba(102, 51, 153, 1)', 'rgba(0, 0, 0, 0)');
+    user.CChartData.data.datasets[0].backgroundColor.push('rgba(153, 51, 153, 1)', 'rgba(0, 0, 0, 0)');
     user.JChartData.data.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
     user.PChartData.data.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
     user.SChartData.data.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
