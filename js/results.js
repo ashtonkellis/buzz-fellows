@@ -93,8 +93,9 @@ function renderHeroCharts (user) {
   var spanEL = document.getElementById('hero-username');
   spanEL.textContent = user.username;
 
-  // render C sharp chart
   var chartId, ctx;
+
+  // render C sharp chart
   chartId = 'hero-results-c';
   ctx = document.getElementById(chartId).getContext('2d');
   new Chart(ctx, user.CChartData); //eslint-disable-line
@@ -110,6 +111,13 @@ function renderHeroCharts (user) {
   chartId = 'hero-results-s';
   ctx = document.getElementById(chartId).getContext('2d');
   new Chart(ctx, user.SChartData); //eslint-disable-line  
+
+  // change order of charts
+  document.getElementById('hero-div-c').style.order = -user.totalPointsC;
+  document.getElementById('hero-div-j').style.order = -user.totalPointsJ;
+  document.getElementById('hero-div-p').style.order = -user.totalPointsP;
+  document.getElementById('hero-div-s').style.order = -user.totalPointsS;
+
 }
 
 function renderAllUserCards () {
