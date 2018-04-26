@@ -1,5 +1,5 @@
 /* ===========================================
-         RESULTS PAGE SPECIFIC STYLING 
+                GENERIC STYLING 
    =========================================== */
 /* BASIC LAYOUT */
 * {
@@ -90,6 +90,43 @@ main h2 {
   border-radius: 10px;
 }
 
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #000;
+}
+
+.icons img {
+  height: 40px;
+  width: 40px;
+}
+
+.icons li {
+  display: inline-block;
+}
+
+footer h2 {
+  background-color: black;
+  margin: 0;
+  padding: 5px;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ===========================================
+         RESULTS PAGE SPECIFIC STYLING 
+   =========================================== */
 /* HERO RESULTS */
 #hero-results {
   max-width: 960px;
@@ -165,36 +202,27 @@ main h2 {
   margin-bottom: 20px;
 }
 
-/* FOOTER */
-footer {
-  width: 100%;
-  background-color: #000;
-}
-
-.icons img {
-  height: 40px;
-  width: 40px;
-}
-
-.icons li {
-  display: inline-block;
-}
-
-footer h2 {
-  background-color: black;
-  margin: 0;
-  padding: 5px;
-}
-
-.share {
+/* ===========================================
+         ABOUT-US PAGE SPECIFIC STYLING 
+   =========================================== */
+.developer {
+  background-color:  #cf3127;
+  border: 1px solid black;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
-footer p {
-  color: white;
-  text-align: center;
-  padding: 5px;
+.developer img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.developer .chart-container {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+  background-color: #333;
 }

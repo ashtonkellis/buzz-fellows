@@ -29,6 +29,7 @@ new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
@@ -58,6 +59,7 @@ new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
@@ -87,6 +89,7 @@ new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
@@ -116,5 +119,6 @@ new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
