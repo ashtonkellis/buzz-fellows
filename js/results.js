@@ -24,6 +24,7 @@ function addChartData () {
       legend: {
         display: true,
       },
+      aspectRatio: 1,
     }
   };
   return chartData;

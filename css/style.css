@@ -216,7 +216,8 @@ footer p {
   border: 1px solid black;
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  align-content: center;
+  width: 960px;
   margin: 20px 0;
   border-radius: 10px;
   padding: 10px;
