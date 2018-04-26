@@ -6,7 +6,6 @@ Chart.defaults.global.legend.labels.boxWidth = 8;
 Chart.defaults.global.legend.labels.fontSize = 8;
 Chart.defaults.global.legend.labels.fontColor = '#FFF';
 
-
 function addChartData () {
   var chartData = {
     type: 'doughnut',
