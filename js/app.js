@@ -46,16 +46,16 @@ function Question (id, text, optionC, optionJ, optionP, optionS) {
 
 new Question (
   'question1',
-  'What do you want to do with code?',
-  new Option ('', 'Make Games', 2, 0, 1, 0),
-  new Option ('', 'Make Mobile Apps', 0, 2, 0, 1),
-  new Option ('', 'Analyze Data', 1, 0, 2, 0),
-  new Option ('', 'Make Websites', 0, 1, 0, 2)
+  'What do you want to make?',
+  new Option ('', 'Games', 2, 0, 1, 0),
+  new Option ('', 'Mobile Apps', 0, 2, 0, 1),
+  new Option ('', 'Robots', 1, 0, 2, 0),
+  new Option ('', 'Websites', 0, 1, 0, 2)
 );
 
 new Question (
   'question2',
-  'Which of these companies would you like to work for most?',
+  'Where would you like to work?',
   new Option ('img/company-logos/microsoftlogo.png', '', 2, 0, 0, 1),
   new Option ('img/company-logos/amazonlogo.png', '', 0, 2, 1, 0),
   new Option ('img/company-logos/boeinglogo.png', '', 0, 1, 2, 0),
