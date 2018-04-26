@@ -1,7 +1,7 @@
 /* global User Chart*/
 User.maxPoints = 16;
 
-Chart.defaults.global.legend.position = 'top';
+Chart.defaults.global.legend.position = 'bottom';
 Chart.defaults.global.legend.labels.boxWidth = 8;
 Chart.defaults.global.legend.labels.fontSize = 8;
 
