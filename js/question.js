@@ -1,6 +1,11 @@
 /* global Question User*/
 'use strict';
 
+var allInputEl = document.getElementsByTagName('input');
+var usernameInputEl = allInputEl[0];
+
+var formEl = document.getElementById('mainQuiz');
+
 //gives me an array of all the questionEl
 var questionBlockElArr = document.getElementsByClassName('question');
 
@@ -64,149 +69,6 @@ function handleSubmit(event) {
   window.location.href = 'results.html';
 }
 
-var formEl = document.getElementById('mainQuiz');
-formEl.addEventListener('submit', handleSubmit);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function renderQuestions() {
-//   //gives me an array of all the questionEl
-//   var questionBlockElArr = document.getElementsByClassName('question');
-//   for(var i = 0; i < Question.numberOfQuestion; i++) {
-//     //prints out the question for each question
-//     var h2El = questionBlockElArr[i].getElementsByTagName('h2')[0];
-//     h2El.textContent = Question.allQuestions[i].text;
-//     var labelElArr = questionBlockElArr[i].getElementsByTagName('label');
-//     //renders the 4 options for the question
-//     for(var j = 0; j < labelElArr.length; j++) {
-//       var pEl = document.createElement('p');
-//       pEl.textContent = Question.allQuestions[i][Question.optionOrderArr[j]].text;
-//       var imgEl = document.createElement('img');
-//       imgEl.src = Question.allQuestions[i][Question.optionOrderArr[j]].url;
-//       var label = labelElArr[j];
-//       label.appendChild(pEl);
-//       label.appendChild(imgEl);
-//     }
-//   }
-// }
-// renderQuestions();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var numValid = 0;
-
-
-var allInputEl = document.getElementsByTagName('input');
-var usernameInputEl = allInputEl[0];
-
 
 function calculateProgress(x) {
   var percentIncrease = (1 / Question.numberOfQuestion) * 100;
@@ -255,7 +117,6 @@ function scrollThere() {
   }
 }
 
-
 function whoIsThatMisterOnTheRadio(e) {
   var numValid = calcNumValid();
   console.log(numValid);
@@ -263,25 +124,10 @@ function whoIsThatMisterOnTheRadio(e) {
   scrollThere();
 }
 
-
 usernameInputEl.addEventListener('keyup', userInputName);
+formEl.addEventListener('submit', handleSubmit);
 formEl.addEventListener('change', whoIsThatMisterOnTheRadio);
 
-
-  // if(Question.allQuestions[count].text && Question.allQuestions[count + 1].text) {
-  //   console.log('hello');
-  //   count ++;
-  //   questionBlockElArr[count].scrollIntoView({behavior: 'smooth'});
-  // } else if (Question.allQuestions[count].text && Question.allQuestions[count + 1].url){
-  //   count ++;
-  //   window.scrollBy({top: 500, left: 0, behavior: 'smooth'});
-  // } else if (Question.allQuestion[count].url && Question.allQuestions[count +1].text) {
-  //   count ++;
-  //   window.scrollBy({top: 600, left: 0, behavior: 'smooth'});
-  // } else {
-  //   count ++;
-  //   window.scrollBy({top: 1000, left: 0, behavior: 'smooth'});
-  // }
 
 
 
