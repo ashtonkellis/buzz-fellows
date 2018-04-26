@@ -1,0 +1,262 @@
+/* ===========================================
+                GENERIC STYLING 
+   =========================================== */
+/* BASIC LAYOUT */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  z-index: 1;
+  background-color: #000;
+  height: 75px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header img {
+  display: inline-block;
+  height: 55px;
+  margin: 10px 0 0 20px;
+}
+
+header nav {
+  width: 960px;
+  margin: 0 auto;
+  color: #FFF;
+}
+
+
+
+header a {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #cf3127;
+  width: 100%;
+}
+
+header ul {
+  float: right;
+  height: 100px;
+}
+
+header li {
+  display: inline-block;
+  background-color: #2882d1;
+  line-height: 55px;
+  margin: 10px 20px 0 0;
+  height: 55px;
+  width: 100px;
+  text-align: center;
+}
+
+/* MAIN */
+main {
+  padding-top: 95px;
+  max-width: 960px;
+  margin: auto;
+}
+
+footer h2, main h2 {
+  background-color: #333;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 0px 10px 20px 10px;
+}
+
+.chart-container {
+  width: 200px !important;
+  height: 200px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #000;
+}
+
+.icons img {
+  height: 40px;
+  width: 40px;
+}
+
+.icons li {
+  display: inline-block;
+}
+
+footer h2 {
+  background-color: black;
+  margin: 0;
+  padding: 5px;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ===========================================
+         RESULTS PAGE SPECIFIC STYLING 
+   =========================================== */
+/* HERO RESULTS */
+#hero-results {
+  max-width: 960px;
+  margin: auto;
+}
+
+#hero-results {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#hero-results > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #cf3127;
+  color: white;
+  margin: 0px 10px 20px 10px;
+  border-radius: 5px;
+}
+
+#hero-results h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+}
+
+#hero-results p {
+  text-align: left;
+}
+
+#hero-results a {
+  text-align: center;
+  color: white;
+}
+
+#hero-results .text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hero-results .text * {
+  margin: 0;
+  padding: 10px;
+}
+
+/* USER CARDS */
+#all-results-section {
+  display: flex;
+  text-align: center;
+  overflow-x: scroll;
+  margin: 0 10px 0 10px;
+}
+
+#all-results-section > div {
+  min-width: 260px;
+  padding: 20px;
+  margin: 0 20px 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #cf3127;
+  color: white;
+  box-shadow: 10px 5px 5px #bbb;
+}
+
+#all-results-section > div > h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#all-results-section div div {
+  margin: 0 auto;
+}
+
+/* ===========================================
+         ABOUT-US PAGE SPECIFIC STYLING 
+   =========================================== */
+.developer {
+  background-color:  #cf3127;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 960px;
+  margin: 0 10px 20px 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.developer span,
+.developer a {
+  color: white;
+}
+
+.developer p:last-of-type {
+  display: inline-block; 
+  text-align: center;
+  margin: auto;
+  color: white;
+
+}
+
+.developer img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+.developer h2 {
+  background-color: #cf3127;
+  padding: 0;
+}
+
+.developer p {
+  color: white;
+  line-height: 1.25;
+  padding: 10px;
+}
+
+.developer .chart-container {
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  background-color: #333;
+  margin: 20px;
+}
