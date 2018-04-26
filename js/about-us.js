@@ -1,6 +1,11 @@
 /* global Chart*/
 'use strict';
 
+Chart.defaults.global.legend.position = 'bottom';
+Chart.defaults.global.legend.labels.boxWidth = 8;
+Chart.defaults.global.legend.labels.fontSize = 8;
+Chart.defaults.global.legend.labels.fontColor = '#FFF';
+
 var ctx;
 
 // ashton chart
@@ -18,18 +23,16 @@ new Chart(ctx, {
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
       ],
-      borderColor:[
-        'rgba(102, 51, 153, 1)',
-        'rgba(209, 31, 31, 1)',
-        'rgba(58, 123, 193, 1)',
-        'rgba(244, 235, 66, 1)'
-      ],
       borderWidth: 1
     }]
   },
   options: {
     rotation: -1.25 * Math.PI,
     responsive: true,
+    legend: {
+      display: true,
+    },
+    aspectRatio: 1,
   }
 });
 
@@ -48,18 +51,16 @@ new Chart(ctx, {
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
       ],
-      borderColor:[
-        'rgba(102, 51, 153, 1)',
-        'rgba(209, 31, 31, 1)',
-        'rgba(58, 123, 193, 1)',
-        'rgba(244, 235, 66, 1)'
-      ],
       borderWidth: 1
     }]
   },
   options: {
     rotation: -1.25 * Math.PI,
     responsive: true,
+    legend: {
+      display: true,
+    },
+    aspectRatio: 1,
   }
 });
 
@@ -78,18 +79,16 @@ new Chart(ctx, {
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
       ],
-      borderColor:[
-        'rgba(102, 51, 153, 1)',
-        'rgba(209, 31, 31, 1)',
-        'rgba(58, 123, 193, 1)',
-        'rgba(244, 235, 66, 1)'
-      ],
       borderWidth: 1
     }]
   },
   options: {
     rotation: -1.25 * Math.PI,
     responsive: true,
+    legend: {
+      display: true,
+    },
+    aspectRatio: 1,
   }
 });
 
@@ -108,17 +107,15 @@ new Chart(ctx, {
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
       ],
-      borderColor:[
-        'rgba(102, 51, 153, 1)',
-        'rgba(209, 31, 31, 1)',
-        'rgba(58, 123, 193, 1)',
-        'rgba(244, 235, 66, 1)'
-      ],
       borderWidth: 1
     }]
   },
   options: {
     rotation: -1.25 * Math.PI,
     responsive: true,
+    legend: {
+      display: true,
+    },
+    aspectRatio: 1,
   }
 });
