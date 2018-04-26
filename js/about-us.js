@@ -93,7 +93,7 @@ new Chart(ctx, {
   }
 });
 
-// mario chart
+// mario charti
 ctx = document.getElementById('mariochart');
 new Chart(ctx, {
   type: 'doughnut',
