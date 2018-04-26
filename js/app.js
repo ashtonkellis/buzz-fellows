@@ -115,5 +115,3 @@ new Question (
   new Option ('img/website-logos/youtubelogo.png', '', 1, 0, 2, 0),
   new Option ('img/website-logos/facebooklogo.png', '', 0, 1, 0, 2)
 );
-
-// console.log(allQuestions[0]);
