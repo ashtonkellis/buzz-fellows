@@ -46,16 +46,16 @@ function Question (id, text, optionC, optionJ, optionP, optionS) {
 
 new Question (
   'question1',
-  'What do you want to do with code?',
-  new Option ('', 'Make Games', 2, 0, 1, 0),
-  new Option ('', 'Make Mobile Apps', 0, 2, 0, 1),
-  new Option ('', 'Analyze Data', 1, 0, 2, 0),
-  new Option ('', 'Make Websites', 0, 1, 0, 2)
+  'What do you want to make?',
+  new Option ('', 'Games', 2, 0, 1, 0),
+  new Option ('', 'Mobile Apps', 0, 2, 0, 1),
+  new Option ('', 'Robots', 1, 0, 2, 0),
+  new Option ('', 'Websites', 0, 1, 0, 2)
 );
 
 new Question (
   'question2',
-  'Which of these companies would you like to work for most?',
+  'Where would you like to work?',
   new Option ('img/company-logos/microsoftlogo.png', '', 2, 0, 0, 1),
   new Option ('img/company-logos/amazonlogo.png', '', 0, 2, 1, 0),
   new Option ('img/company-logos/boeinglogo.png', '', 0, 1, 2, 0),
@@ -74,19 +74,19 @@ new Question (
 new Question (
   'question4',
   'How do you feel about change?',
-  new Option ('', 'Love it', 0, 1, 2, 0),
-  new Option ('', 'Like it', 0, 2, 1, 0),
-  new Option ('', 'Dislike it', 1, 0, 0, 2),
-  new Option ('', 'Hate it', 2, 0, 0, 1)
+  new Option ('', 'Love it', 0, 0, 2, 1),
+  new Option ('', 'Like it', 2, 0, 1, 0),
+  new Option ('', 'Dislike it', 1, 2, 0, 0),
+  new Option ('', 'Hate it', 0, 1, 0, 2)
 );
 
 new Question (
   'question5',
   'How would your friends describe you?',
-  new Option ('', 'Determined', 0, 1, 2, 0),
-  new Option ('', 'Powerful', 0, 2, 1, 0),
-  new Option ('', 'Productive', 1, 0, 0, 2),
-  new Option ('', 'Problem Solver', 2, 0, 0, 1)
+  new Option ('', 'Determined', 2, 1, 0, 0),
+  new Option ('', 'Powerful', 1, 2, 0, 0),
+  new Option ('', 'Productive', 0, 0, 2, 1),
+  new Option ('', 'Problem Solver', 0, 0, 1, 2)
 );
 
 new Question (
