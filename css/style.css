@@ -85,14 +85,13 @@ main h2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid grey;
-  background-color: white;
+  border: 1px solid darkgrey;
+  background-color: lightgrey;
   border-radius: 10px;
 }
 
 /* HERO RESULTS */
 #hero-results {
-  width: 80%;
   max-width: 960px;
   margin: auto;
 }
@@ -105,18 +104,28 @@ main h2 {
 
 #hero-results > div {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   border: 1px solid black;
   padding: 10px;
+  background-color: #EEE;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-/* #all-results-section > div > h3 {
-  color: white;
-  font-size: 20px;
+#hero-results h3 {
   text-transform: uppercase;
-  margin-bottom: 20px;
-} */
+  font-size: 20px;
+  text-align: center;
+}
+
+#hero-results p {
+  text-align: left;
+}
+
+#hero-results a {
+  text-align: center;
+}
 
 #hero-results .text {
   width: 50%;
@@ -143,12 +152,11 @@ main h2 {
   margin: 10px 0;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #999;
-  box-shadow: 10px 5px 5px #888;
+  background-color: #EEE;
+  box-shadow: 10px 5px 5px #bbb;
 }
 
 #all-results-section > div > h3 {
-  color: white;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 20px;
