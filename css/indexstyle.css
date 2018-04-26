@@ -1,0 +1,175 @@
+/* ===========================================
+         INDEX.HTML SPECIFIC STYLING 
+   =========================================== */
+main {
+  margin: 0 auto;
+  width: 960px;
+  font-size: 0;
+}
+
+main img {
+  width: 460px;
+  height: 460px;
+  margin-bottom: 20px;
+}
+
+main img:hover {
+  filter: brightness(.66);
+  box-sizing: border-box;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #cf3127;
+}
+
+input[type=radio]:checked + label img {
+  box-sizing: border-box;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #2882d1;
+}
+
+#mainQuiz > label {
+  width: 940px;
+  line-height: 2em;
+  margin-left: 10px;
+}
+
+#mainQuiz > label:hover {
+  filter: brightness(1);
+}
+
+#username {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 450px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+main h2 {
+  background-color: #333;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin: 0 10px 20px 10px;
+}
+
+main h1 {
+  background-color: #333;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin-bottom: 20px;
+  margin: 0 10px 20px 10px;
+}
+
+main label {
+  display: inline-block;
+  width: 460px;
+  height: 200px;
+  background-color: #cf3127;
+  color: #FFF;
+  text-align: center;
+  font-size: 28px;
+  line-height: 200px;
+  margin: 0 10px 20px 10px;
+}
+
+main label:hover {
+  filter:brightness(1.5);
+}
+
+input[type=radio]:checked + label {
+  background-color: #2882d1;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit] {
+  display: block;
+  background-color:#cf3127;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  height: 200px;
+  width: 460px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #2882d1;
+}
+
+aside {
+  position: fixed;
+  bottom: 75px;
+  left: 0;
+  font-size: 16px;
+  background-color: #2882d1;
+  width: 25%;
+  height: 75px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+aside progress {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+aside div {
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+  /* FOOTER */
+footer {
+  width: 100%;
+  background-color: #000;
+}
+
+.icons img {
+  height: 40px;
+  width: 40px;
+}
+
+.icons li {
+  display: inline-block;
+}
+
+footer h2 {
+  background-color: black;
+  margin: 0;
+  padding: 5px;
+}
+
+.share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
