@@ -3,7 +3,7 @@
 
 Chart.defaults.global.legend.position = 'bottom';
 Chart.defaults.global.legend.labels.boxWidth = 8;
-Chart.defaults.global.legend.labels.fontSize = 8;
+Chart.defaults.global.legend.labels.fontSize = 16;
 Chart.defaults.global.legend.labels.fontColor = '#FFF';
 
 var ctx;
