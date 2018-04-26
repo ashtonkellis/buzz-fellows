@@ -3,8 +3,9 @@
 
 var ctx;
 
+// ashton chart
 ctx = document.getElementById('ashtonchart');
-var ashtonChart = new Chart(ctx, {
+new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
@@ -28,11 +29,13 @@ var ashtonChart = new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
+// ben chart
 ctx = document.getElementById('benchart');
-var benChart = new Chart(ctx, {
+new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
@@ -56,11 +59,13 @@ var benChart = new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
+// jenny chart
 ctx = document.getElementById('jennychart');
-var jennyChart = new Chart(ctx, {
+new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
@@ -84,12 +89,13 @@ var jennyChart = new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
 
-
+// mario chart
 ctx = document.getElementById('mariochart');
-var marioChart = new Chart(ctx, {
+new Chart(ctx, {
   type: 'doughnut',
   data: {
     labels: ['C#', 'Java', 'Python', 'JavaScript'],
@@ -113,5 +119,6 @@ var marioChart = new Chart(ctx, {
   },
   options: {
     rotation: -1.25 * Math.PI,
+    responsive: true,
   }
 });
