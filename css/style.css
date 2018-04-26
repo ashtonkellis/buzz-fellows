@@ -29,11 +29,17 @@ header img {
 header nav {
   width: 960px;
   margin: 0 auto;
+  color: #FFF;
 }
 
+
+
 header a {
-  color: #FFF;
+  display: inline-block;
   text-decoration: none;
+  color: #FFF;
+  background-color: #cf3127;
+  width: 100%;
 }
 
 header ul {
@@ -43,7 +49,7 @@ header ul {
 
 header li {
   display: inline-block;
-  background-color: #cf3127;
+  background-color: #2882d1;
   line-height: 55px;
   margin: 10px 20px 0 0;
   height: 55px;
@@ -187,14 +193,16 @@ footer p {
 /* USER CARDS */
 #all-results-section {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  /* text-align: center; */
+  /* flex-wrap: wrap; */
+  overflow-x: scroll;
 }
 
 #all-results-section > div {
-  padding: 30px;
-  margin: 10px 0;
+  min-width: 300px;
+  padding: 20px;
+  margin-right: 20px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: #cf3127;
@@ -203,6 +211,8 @@ footer p {
 }
 
 #all-results-section > div > h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 20px;
