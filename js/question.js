@@ -206,7 +206,7 @@ formEl.addEventListener('submit', handleSubmit);
 
 var allInputEl = document.getElementsByTagName('input');
 var usernameInputEl = allInputEl[0];
-
+var count = 0;
 
 function calculateProgress(x) {
   var percentIncrease = (1 / Question.numberOfQuestion) * 100;
@@ -223,7 +223,7 @@ function userInputName(e) {
     if(usernameInputEl.validity.valid) {
       document.getElementById('progress-message').textContent = 'Hello, ' + usernameInputEl.value.toUpperCase();
       document.querySelector('.question').scrollIntoView({behavior: 'smooth'});
-    } 
+    }
   }
 }
 
@@ -246,6 +246,20 @@ function whoIsThatMisterOnTheRadio(e) {
   var numValid = calcNumValid();
   console.log(numValid);
   calculateProgress(numValid);
+  if(Question.allQuestions[count].text && Question.allQuestions[count + 1].text) {
+    console.log('hello');
+    count ++;
+    questionBlockElArr[count].scrollIntoView({behavior: 'smooth'});
+  } else if (Question.allQuestions[count].text && Question.allQuestions[count + 1].url){
+    count ++;
+    window.scrollBy({top: 500, left: 0, behavior: 'smooth'});
+  } else if (Question.allQuestion[count].url && Question.allQuestions[count +1].text) {
+    count ++;
+    window.scrollBy({top: 600, left: 0, behavior: 'smooth'});
+  } else {
+    count ++;
+    window.scrollBy({top: 1000, left: 0, behavior: 'smooth'});
+  }
 }
 
 usernameInputEl.addEventListener('keyup', userInputName);
