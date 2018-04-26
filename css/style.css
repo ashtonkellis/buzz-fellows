@@ -194,7 +194,7 @@ footer p {
 #all-results-section {
   display: flex;
   /* justify-content: space-around; */
-  /* text-align: center; */
+  text-align: center;
   /* flex-wrap: wrap; */
   overflow-x: scroll;
 }
@@ -216,6 +216,10 @@ footer p {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+#all-results-section div div {
+  margin: 0 auto;
 }
 
 /* ===========================================
