@@ -206,7 +206,7 @@ formEl.addEventListener('submit', handleSubmit);
 
 var allInputEl = document.getElementsByTagName('input');
 var usernameInputEl = allInputEl[0];
-var count = 0;
+
 
 function calculateProgress(x) {
   var percentIncrease = (1 / Question.numberOfQuestion) * 100;
@@ -241,36 +241,47 @@ function calcNumValid() {
   return numValid;
 }
 
+function scrollThere() {
+  for(var i in Question.allQuestions) {
+    var questionId = Question.allQuestions[i].id;
+    console.log(formEl[questionId]);
+    if(formEl[questionId].value === '') {
+      // console.log(formEl);
+      document.getElementsByClassName('question')[i].scrollIntoView({behavior: 'smooth'});
+      break;
+    } else {
+      document.getElementsByTagName('footer')[0].scrollIntoView({behavior: 'smooth'});
+    }
+  }
+}
+
 
 function whoIsThatMisterOnTheRadio(e) {
   var numValid = calcNumValid();
   console.log(numValid);
   calculateProgress(numValid);
-  if(Question.allQuestions[count].text && Question.allQuestions[count + 1].text) {
-    console.log('hello');
-    count ++;
-    questionBlockElArr[count].scrollIntoView({behavior: 'smooth'});
-  } else if (Question.allQuestions[count].text && Question.allQuestions[count + 1].url){
-    count ++;
-    window.scrollBy({top: 500, left: 0, behavior: 'smooth'});
-  } else if (Question.allQuestion[count].url && Question.allQuestions[count +1].text) {
-    count ++;
-    window.scrollBy({top: 600, left: 0, behavior: 'smooth'});
-  } else {
-    count ++;
-    window.scrollBy({top: 1000, left: 0, behavior: 'smooth'});
-  }
+  scrollThere();
 }
+
 
 usernameInputEl.addEventListener('keyup', userInputName);
 formEl.addEventListener('change', whoIsThatMisterOnTheRadio);
 
 
-
-
-
-
-
+  // if(Question.allQuestions[count].text && Question.allQuestions[count + 1].text) {
+  //   console.log('hello');
+  //   count ++;
+  //   questionBlockElArr[count].scrollIntoView({behavior: 'smooth'});
+  // } else if (Question.allQuestions[count].text && Question.allQuestions[count + 1].url){
+  //   count ++;
+  //   window.scrollBy({top: 500, left: 0, behavior: 'smooth'});
+  // } else if (Question.allQuestion[count].url && Question.allQuestions[count +1].text) {
+  //   count ++;
+  //   window.scrollBy({top: 600, left: 0, behavior: 'smooth'});
+  // } else {
+  //   count ++;
+  //   window.scrollBy({top: 1000, left: 0, behavior: 'smooth'});
+  // }
 
 
 
