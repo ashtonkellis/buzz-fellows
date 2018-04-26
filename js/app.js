@@ -74,19 +74,19 @@ new Question (
 new Question (
   'question4',
   'How do you feel about change?',
-  new Option ('', 'Love it', 0, 1, 2, 0),
-  new Option ('', 'Like it', 0, 2, 1, 0),
-  new Option ('', 'Dislike it', 1, 0, 0, 2),
-  new Option ('', 'Hate it', 2, 0, 0, 1)
+  new Option ('', 'Love it', 0, 0, 2, 1),
+  new Option ('', 'Like it', 2, 0, 1, 0),
+  new Option ('', 'Dislike it', 1, 2, 0, 0),
+  new Option ('', 'Hate it', 0, 1, 0, 2)
 );
 
 new Question (
   'question5',
   'How would your friends describe you?',
-  new Option ('', 'Determined', 0, 1, 2, 0),
-  new Option ('', 'Powerful', 0, 2, 1, 0),
-  new Option ('', 'Productive', 1, 0, 0, 2),
-  new Option ('', 'Problem Solver', 2, 0, 0, 1)
+  new Option ('', 'Determined', 2, 1, 0, 0),
+  new Option ('', 'Powerful', 1, 2, 0, 0),
+  new Option ('', 'Productive', 0, 0, 2, 1),
+  new Option ('', 'Problem Solver', 0, 0, 1, 2)
 );
 
 new Question (
