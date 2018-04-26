@@ -21,6 +21,9 @@ function addChartData () {
     options: {
       rotation: -1.0 * Math.PI,
       responsive: true,
+      legend: {
+        display: true,
+      },
     }
   };
   return chartData;
@@ -53,6 +56,11 @@ function calculateAllChartData() {
     user.JChartData = addChartData();
     user.PChartData = addChartData();
     user.SChartData = addChartData();
+    // disable label displays
+    user.CChartData.options.legend.display = false;
+    user.JChartData.options.legend.display = false;
+    user.PChartData.options.legend.display = false;
+    user.SChartData.options.legend.display = false;
     // push in labels
     user.CChartData.data.labels.push('C#');
     user.JChartData.data.labels.push('Java');
@@ -76,7 +84,6 @@ function calculateAllChartData() {
     user.JChartData.data.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
     user.PChartData.data.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
     user.SChartData.data.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
-
   }
 }
 
