@@ -3,7 +3,7 @@
 
 Chart.defaults.global.legend.position = 'bottom';
 Chart.defaults.global.legend.labels.boxWidth = 8;
-Chart.defaults.global.legend.labels.fontSize = 8;
+Chart.defaults.global.legend.labels.fontSize = 16;
 Chart.defaults.global.legend.labels.fontColor = '#FFF';
 
 var ctx;
@@ -18,7 +18,7 @@ new Chart(ctx, {
 
       data: [2, 3, 8, 16],
       backgroundColor: [
-        'rgba(102, 51, 153, 1)',
+        'rgba(153, 51, 153, 1)',
         'rgba(209, 31, 31, 1)',
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
@@ -46,7 +46,7 @@ new Chart(ctx, {
 
       data: [16, 2, 3, 8],
       backgroundColor: [
-        'rgba(102, 51, 153, 1)',
+        'rgba(153, 51, 153, 1)',
         'rgba(209, 31, 31, 1)',
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
@@ -74,7 +74,7 @@ new Chart(ctx, {
 
       data: [8, 16, 2, 3],
       backgroundColor: [
-        'rgba(102, 51, 153, 1)',
+        'rgba(153, 51, 153, 1)',
         'rgba(209, 31, 31, 1)',
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
@@ -102,7 +102,7 @@ new Chart(ctx, {
 
       data: [3, 8, 16, 2],
       backgroundColor: [
-        'rgba(102, 51, 153, 1)',
+        'rgba(153, 51, 153, 1)',
         'rgba(209, 31, 31, 1)',
         'rgba(58, 123, 193, 1)',
         'rgba(244, 235, 66, 1)'
