@@ -21,6 +21,9 @@ function addChartData () {
     options: {
       rotation: -1.0 * Math.PI,
       responsive: true,
+      legend: {
+        display: true,
+      },
     }
   };
   return chartData;
@@ -53,6 +56,11 @@ function calculateAllChartData() {
     user.JChartData = addChartData();
     user.PChartData = addChartData();
     user.SChartData = addChartData();
+    // disable label displays
+    user.CChartData.options.legend.display = false;
+    user.JChartData.options.legend.display = false;
+    user.PChartData.options.legend.display = false;
+    user.SChartData.options.legend.display = false;
     // push in labels
     user.CChartData.data.labels.push('C#');
     user.JChartData.data.labels.push('Java');
@@ -76,7 +84,6 @@ function calculateAllChartData() {
     user.JChartData.data.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
     user.PChartData.data.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
     user.SChartData.data.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
-
   }
 }
 
@@ -85,8 +92,9 @@ function renderHeroCharts (user) {
   var spanEL = document.getElementById('hero-username');
   spanEL.textContent = user.username;
 
-  // render C sharp chart
   var chartId, ctx;
+
+  // render C sharp chart
   chartId = 'hero-results-c';
   ctx = document.getElementById(chartId).getContext('2d');
   new Chart(ctx, user.CChartData); //eslint-disable-line
@@ -102,6 +110,12 @@ function renderHeroCharts (user) {
   chartId = 'hero-results-s';
   ctx = document.getElementById(chartId).getContext('2d');
   new Chart(ctx, user.SChartData); //eslint-disable-line  
+
+  // change order of charts
+  document.getElementById('hero-div-c').style.order = -user.totalPointsC;
+  document.getElementById('hero-div-j').style.order = -user.totalPointsJ;
+  document.getElementById('hero-div-p').style.order = -user.totalPointsP;
+  document.getElementById('hero-div-s').style.order = -user.totalPointsS;
 }
 
 function renderAllUserCards () {
