@@ -26,8 +26,8 @@ function addChartData () {
   return chartData;
 }
 
-function calculateAllChartData(user) {
-  for (user of User.allUser) {
+function calculateAllChartData() {
+  for (var user of User.allUser) {
     // CALCULATE DATA FOR THE COMBINED CHART
     user.allChartData = addChartData();
     var chartData = user.allChartData.data;
@@ -46,11 +46,7 @@ function calculateAllChartData(user) {
       'rgba(209, 31, 31, 1)',
       'rgba(58, 123, 193, 1)',
       'rgba(244, 235, 66, 1)');
-    chartData.datasets[0].borderColor.push(
-      'rgba(102, 51, 153, 1)',
-      'rgba(209, 31, 31, 1)',
-      'rgba(58, 123, 193, 1)',
-      'rgba(244, 235, 66, 1)');
+
     //CALCULATE DATA FOR INDIVIDUAL CHARTS
     // make empty data sets for each 401 course
     user.CChartData = addChartData();
@@ -80,11 +76,7 @@ function calculateAllChartData(user) {
     user.JChartData.data.datasets[0].backgroundColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
     user.PChartData.data.datasets[0].backgroundColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
     user.SChartData.data.datasets[0].backgroundColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
-    // push in border colors
-    user.CChartData.data.datasets[0].borderColor.push('rgba(102, 51, 153, 1)', 'rgba(0, 0, 0, 0)');
-    user.JChartData.data.datasets[0].borderColor.push('rgba(209, 31, 31, 1)', 'rgba(0, 0, 0, 0)');
-    user.PChartData.data.datasets[0].borderColor.push('rgba(58, 123, 193, 1)', 'rgba(0, 0, 0, 0)');
-    user.SChartData.data.datasets[0].borderColor.push('rgba(244, 235, 66, 1)', 'rgba(0, 0, 0, 0)');
+
   }
 }
 
