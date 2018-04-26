@@ -60,12 +60,11 @@ header li {
 /* MAIN */
 main {
   padding-top: 95px;
-  width: 80%;
   max-width: 960px;
   margin: auto;
 }
 
-main h1 {
+footer h2, main h2 {
   background-color: #333;
   text-align: center;
   font-size: 28px;
@@ -74,21 +73,7 @@ main h1 {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.25em;
-  margin-bottom: 20px;
-  margin: 0 10px 20px 10px;
-}
-
-footer h2,
-main h2 {
-  background-color: #333;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  color: #FFF;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1.25em;
-  margin: 30px 0 10px 0;
+  margin: 0px 10px 20px 10px;
 }
 
 .chart-container {
@@ -159,7 +144,7 @@ footer p {
   padding: 10px;
   background-color: #cf3127;
   color: white;
-  margin: 5px;
+  margin: 0px 10px 20px 10px;
   border-radius: 5px;
 }
 
@@ -193,16 +178,15 @@ footer p {
 /* USER CARDS */
 #all-results-section {
   display: flex;
-  /* justify-content: space-around; */
   text-align: center;
-  /* flex-wrap: wrap; */
   overflow-x: scroll;
+  margin: 0 10px 0 10px;
 }
 
 #all-results-section > div {
   min-width: 300px;
   padding: 20px;
-  margin-right: 20px;
+  margin: 0 20px 10px 0;
   border: 1px solid black;
   border-radius: 10px;
   background-color: #cf3127;
@@ -232,7 +216,7 @@ footer p {
   justify-content: space-evenly;
   align-content: center;
   width: 960px;
-  margin: 20px 0;
+  margin: 0 10px 20px 10px;
   border-radius: 10px;
   padding: 10px;
 }
