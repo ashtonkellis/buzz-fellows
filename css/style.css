@@ -85,8 +85,8 @@ main h2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid darkgrey;
-  background-color: lightgrey;
+  border: 1px solid black;
+  background-color: #333;
   border-radius: 10px;
 }
 
@@ -108,7 +108,8 @@ main h2 {
   align-items: center;
   border: 1px solid black;
   padding: 10px;
-  background-color: #EEE;
+  background-color: #cf3127;
+  color: white;
   margin: 5px;
   border-radius: 5px;
 }
@@ -125,6 +126,7 @@ main h2 {
 
 #hero-results a {
   text-align: center;
+  color: white;
 }
 
 #hero-results .text {
@@ -152,7 +154,8 @@ main h2 {
   margin: 10px 0;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: #EEE;
+  background-color: #cf3127;
+  color: white;
   box-shadow: 10px 5px 5px #bbb;
 }
 
