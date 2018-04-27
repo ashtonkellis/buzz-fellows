@@ -175,6 +175,29 @@ footer p {
   padding: 10px;
 }
 
+/* retake quiz button */
+#retake-quiz {
+  display: block;
+  background-color: #cf3127;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  line-height: 220px;
+  text-align: center;
+  height: 220px;
+  width: 460px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+#retake-quiz:hover {
+  background-color: #2882d1;
+}
+
+
 /* USER CARDS */
 #all-results-section {
   display: flex;
